@@ -9,7 +9,7 @@ var config = require('./config'),
     methodOverride = require('method-override');
 
 // Define the Express configuration method
-module.exports = function (db) {
+module.exports = function () {
     // Create a new Express application instance
     var app = express();
 

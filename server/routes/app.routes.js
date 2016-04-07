@@ -19,6 +19,6 @@ module.exports = function(app) {
     });
 
     app.all('/*', function(req, res) {
-        res.sendFile(path.join(__dirname + '../../../' + config.dir + '/index.html'));
+        res.sendFile(path.join(process.env.PWD + '/' + config.dir + '/index.html'));
     });
 };
