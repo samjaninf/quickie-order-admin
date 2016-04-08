@@ -59,7 +59,7 @@ module.exports = function(grunt) {
             }
         },
         ngtemplates: {
-            live: {
+            quickie: {
                 cwd: 'client',
                 src: '**/*.tpl.html',
                 dest: '.tmp/template.js',

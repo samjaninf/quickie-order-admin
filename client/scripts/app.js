@@ -1,3 +1,5 @@
 (function() {
-    angular.module('quickie', []);
+    angular.module('quickie', [
+        'ui.router'
+    ]);
 })();
