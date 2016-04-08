@@ -1,5 +1,7 @@
 (function() {
     angular.module('quickie', [
-        'ui.router'
+        'ui.router',
+        'ngMaterial',
+        'ngMdIcons'
     ]);
 })();
