@@ -12,5 +12,7 @@ module.exports = function () {
     // is tightly coupled to a route so it should perhaps be defined in a config file with routes
     // with an iterator.
 
+    require('../models/users.model.js');
+
     return db;
-}
+};

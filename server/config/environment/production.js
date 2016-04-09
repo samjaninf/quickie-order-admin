@@ -7,5 +7,6 @@
 
 module.exports = {
     db: process.env.MONGOLAB_URI,
-    dir: 'client'
+    dir: 'client',
+    tokenSecret: process.env.JWT_TOKEN_SECRET
 };

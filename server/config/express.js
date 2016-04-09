@@ -6,7 +6,8 @@ var config = require('./config'),
     morgan = require('morgan'),
     compress = require('compression'),
     bodyParser = require('body-parser'),
-    methodOverride = require('method-override');
+    methodOverride = require('method-override'),
+    passport = require('passport');
 
 // Define the Express configuration method
 module.exports = function () {
@@ -23,6 +24,7 @@ module.exports = function () {
         app.use(compress());
     }
 
+
     // Use the 'body-parser' and 'method-override' middleware functions
     app.use(bodyParser.urlencoded({
         extended: true
@@ -37,11 +39,20 @@ module.exports = function () {
     // Configure static file serving
     app.use(express.static('./' + config.dir));
 
+    // Load and initialize passport
+    require('./passport.js');
+    app.use(passport.initialize());
+
     // Load the routing files
     require('../routes/index.routes.js')(app);
+    require('../routes/auth.routes.js')(app);
+    require('../routes/users.routes.js')(app);
 
     // This has to go last as a catch all
     require('../routes/app.routes.js')(app);
+
+    // Use error handling middleware
+    require('../lib/errorHandlers.js')(app);
 
     // Return the Server instance
     return server;

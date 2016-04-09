@@ -13,7 +13,7 @@ var mongoose = require('./server/config/mongoose'),
     express = require('./server/config/express');
 
 // Create a new Mongoose connection instance
-//var db = mongoose();
+var db = mongoose();
 
 // Create a new Express application instance
 var app = express();
