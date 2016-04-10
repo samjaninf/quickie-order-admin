@@ -41,6 +41,7 @@
 
     #login-form {
       padding: 128px 48px 48px 48px;
+      height: 100%;
 
       .logo {
         width: 128px;
@@ -156,6 +157,19 @@
         .text {
           margin-right: 8px
         }
+      }
+
+      .terms {
+        font-size: 13px;
+        margin: 16px 0 32px 0;
+      }
+
+      md-checkbox {
+        margin: 0;
+      }
+
+      a {
+        margin-left: 4px;
       }
     }
   }
