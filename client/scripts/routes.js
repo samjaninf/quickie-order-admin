@@ -17,7 +17,7 @@
         // Pages without menus and sidenav
         $stateProvider
             .state('layout-page', {
-                templateUrl: 'scripts/states/layout/page.tpl.html'
+                templateUrl: 'scripts/states/layout/layout-page.tpl.html'
             })
 
             // Login authentication.

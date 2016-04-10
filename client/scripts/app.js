@@ -2,6 +2,9 @@
     angular.module('quickie', [
         'ui.router',
         'ngMaterial',
-        'ngMdIcons'
+        'ngMdIcons',
+        'ngMessages',
+        'ngScrollbar',
+        'ngAnimate'
     ]);
 })();

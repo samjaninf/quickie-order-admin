@@ -1,1 +1,80 @@
-<h1>Login</h1>
+<div id="login" layout="row" flex>
+    <div id="login-intro" flex hide show-gt-sm>
+        <div class="logo"><span>QO</span></div>
+        <div class="title">Welcome to Quickie Order</div>
+        <div class="description">Mumblecore man braid polaroid tousled street art bespoke, migas authentic trust fund synth iPhone deep v small batch. Selvage ethical you probably haven't heard of them, lomo sriracha.</div>
+    </div>
+    <md-content id="login-form-wrapper" class="md-whiteframe-8dp" flex ng-scrollbar rebuild-on-resize>
+            <div id="login-form">
+                <div class="logo" hide-gt-sm><span>QO</span></div>
+                <div class="title">Log in to your account</div>
+                <div class="description">You probably haven't heard of them tote bag</div>
+                <form name="loginForm" novalidate>
+                    <md-input-container class="md-block">
+                        <input type="email"
+                               name="email"
+                               ng-model="vm.form.email"
+                               placeholder="Email"
+                               ng-pattern=/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/
+                               required
+                               aria-label="Email"
+                               aria-invalid="false"/>
+                        <div ng-messages="loginForm.email.$error"
+                             role="alert"
+                             aria-live="assertive"
+                             ng-show="(!loginForm.email.$untouched || loginForm.$submitted)
+                              && (loginForm.email.$error.email || loginForm.email.$error.required)">
+                            <div ng-message="required"><span>Email field is required</span></div>
+                            <div ng-message="pattern"><span>Email must be a valid e-mail address</span></div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <input type="password"
+                               name="password"
+                               ng-model="vm.form.password"
+                               placeholder="Password"
+                               required
+                               aria-label="Password"
+                               aria-invalid="false"/>
+                        <div ng-messages="loginForm.password.$error"
+                             role="alert"
+                             aria-live="assertive"
+                             ng-show="(!loginForm.password.$untouched || loginForm.$submitted) && loginForm.password.$error.required">
+                            <div ng-message="required"><span>Password field is required</span></div>
+                        </div>
+                    </md-input-container>
+                    <div class="forgot-password" layout="row" layout-sm="column" layout-align="space-between center">
+                        <a hrer="#">Forgot Password?</a>
+                    </div>
+                    <md-button class="md-raised md-primary submit"
+                               type="submit"
+                           ng-disabled="loginForm.$invalid || loginForm.$pristine"
+                           disabled="disabled"
+                               aria-label="Log IN">LOG IN</md-button>
+                </form>
+                <div class="separator"><span class="text">OR</span></div>
+                <div layout="column" layout-align="start center">
+                    <button class="md-raised google md-button md-ink-ripple" layout="row" layout-sm="column" layout-align="center center">
+                        <div layout="row" layout-align="center center">
+                            <span>
+                                <ng-md-icon icon="google-plus"></ng-md-icon>
+                                <span>Log in with Google</span>
+                            </span>
+                        </div>
+                    </button>
+                    <button class="md-raised facebook md-button md-ink-ripple" layout="row" layout-sm="column" layout-align="center center">
+                        <div layout="row" layout-align="center center">
+                            <span>
+                                <ng-md-icon icon="facebook"></ng-md-icon>
+                                <span>Log in with facebook</span>
+                            </span>
+                        </div>
+                    </button>
+                </div>
+                <div class="register" layout="row" layout-sm="column" layout-align="center center">
+                    <span class="text">Don't have an account?</span>
+                    <a ui-sref="register">Create an account</a>
+                </div>
+            </div>
+    </md-content>
+</div>
