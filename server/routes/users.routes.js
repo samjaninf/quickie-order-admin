@@ -10,5 +10,5 @@ var auth = jwt({
 });
 
 module.exports = function(app) {
-    app.get('/api/users/:userId', auth, users.detail);
+    app.get('/api/users', auth, users.detail); // missing :userId
 };

@@ -9,7 +9,7 @@
             <div class="logo" hide-gt-sm><span>QO</span></div>
             <div class="title">Create an account</div>
             <div class="description">You probably haven't heard of them tote bag</div>
-            <form name="loginForm" novalidate>
+            <form name="loginForm" novalidate ng-submit="vm.submit()">
                 <md-input-container class="md-block">
                     <input type="text"
                            name="name"
@@ -66,19 +66,22 @@
                            ng-model="vm.form.passwordConfirm"
                            placeholder="Password confirm"
                            required
+                           match="vm.form.password"
                            aria-label="Password confirm"
                            aria-invalid="false"/>
                     <div ng-messages="loginForm.passwordConfirm.$error"
                          role="alert"
                          aria-live="assertive"
-                         ng-show="(!loginForm.passwordConfirm.$untouched || loginForm.$submitted) && loginForm.passwordConfirm.$error.required">
+                         ng-show="(!loginForm.passwordConfirm.$untouched || loginForm.$submitted)
+                            && (loginForm.passwordConfirm.$error.required || loginForm.passwordConfirm.$error.match)">
                         <div ng-message="required"><span>Password confirm field is required</span></div>
+                        <div ng-message="match"><span>The passwords do not match</span></div>
                     </div>
                 </md-input-container>
 
                 <div class="terms" layout="row" layout-align="center center">
                     <md-checkbox name="terms"
-                                 ng-model="vm.form.acceptTerms"
+                                 ng-model="vm.form.terms"
                                  aria-label="I read and accept"
                                  required
                                  role="checkbox"

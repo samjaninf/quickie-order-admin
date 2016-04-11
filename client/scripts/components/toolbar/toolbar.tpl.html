@@ -19,20 +19,20 @@
                             <div class="avatar-wrapper">
                                 <img md-menu-align-target class="avatar" src="assets/images/avatars/profile.jpg">
                             </div>
-                            <span class="username hide-xs">Adam Sohn</span>
+                            <span class="username hide-xs">{{vm.currentUser.name}}</span>
                             <ng-md-icon icon="arrow_drop_down" style="color: black;"></ng-md-icon>
                         </div>
                     </md-button>
-                    <md-menu-content width="1">
-                        <md-menu-item class="user-menu-item md-indent" layout-align="start start">
+                    <md-menu-content width="1" md-position-mode="target-right">
+                        <md-menu-item class="user-menu-item" layout-align="start start">
                             <md-button ui-sref="profile">
                                 <md-icon md-font-icon="person">person</md-icon>
                                 <span>My Profile</span>
                             </md-button>
                         </md-menu-item>
                         <md-menu-divider></md-menu-divider>
-                        <md-menu-item class="user-menu-item md-indent">
-                            <md-button ui-sref="profile">
+                        <md-menu-item class="user-menu-item">
+                            <md-button ng-click="vm.logout()">
                                 <md-icon md-font-icon="exit_to_app">exit_to_app</md-icon>
                                 <span>Logout</span>
                             </md-button>

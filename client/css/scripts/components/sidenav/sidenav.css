@@ -19,3 +19,23 @@
     margin-left: 32px;
     font-size: 16px;
     text-transform: uppercase; }
+
+#sidenav .badge {
+  position: absolute;
+  color: #ffffff;
+  text-align: center;
+  top: 52%;
+  right: 60px;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 4px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 20px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  transition: opacity 0.2s ease-in-out 0.1s; }
+  #sidenav .badge.red {
+    background: #259b24; }

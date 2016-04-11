@@ -2,7 +2,7 @@
 
 // Set the 'test' environment configuration object
 module.exports = {
-    db: 'mongodb://localhost/954back-test',
+    db: 'mongodb://localhost/quickie-order-test',
     dir: 'client',
     tokenSecret: 'kitties'
 };

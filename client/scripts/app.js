@@ -5,6 +5,8 @@
         'ngMdIcons',
         'ngMessages',
         'ngScrollbar',
-        'ngAnimate'
+        'ngAnimate',
+        'validation.match'
+
     ]);
 })();

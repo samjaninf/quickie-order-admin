@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
     Users = mongoose.model('Users');
 
 exports.detail = function(req, res, next) {
-
+console.log(req.payload);
     // If no user ID exists in the JWT return a 401
     if (!req.payload._id) {
         var error = new Error("UnauthorizedError: private profile");

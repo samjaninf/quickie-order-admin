@@ -3,7 +3,8 @@
             ng-click="vm.toggleSidenav()"
             md-theme="dark"
             layout="column"
-            class="site-sidenav md-sidenav-left md-whiteframe-z2">
+            class="site-sidenav md-sidenav-left md-whiteframe-z2"
+            id="sidenav">
     <md-toolbar id="sidenav-header" class="md-whiteframe-1dp" layout="row" layout-align="space-between center">
         <div class="logo" layout="row" layout-align="space-between center">
             <span class="logo-image">QO</span>
@@ -23,7 +24,7 @@
             <md-list-item ui-sref="orders">
                 <md-icon md-font-icon="move_to_inbox">move_to_inbox</md-icon>
                 <p>Orders</p>
-
+                <span class="badge red">25</span>
                 <md-menu class="md-secondary" md-position-mode="target-right target">
                     <md-button class="md-icon-button" ng-click="vm.openMenu($mdOpenMenu, $event)">
                         <md-icon md-menu-origin md-font-icon="more_vert">more_vert</md-icon>

@@ -1,6 +1,7 @@
 (function() {
     angular.module('quickie')
-        .config(router);
+        .config(router)
+        .run(run);
 
     router.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider'];
 
@@ -63,6 +64,17 @@
                     }
                 }
             })
+    }
+
+    run.$inject = ['$rootScope', '$location', 'auth'];
+
+    function run($rootScope, $location, auth) {
+
+        $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+            if ($location.path() === '/profile' && !auth.isLoggedIn()) {
+                $location.path('/login');
+            }
+        });
     }
 
 })();

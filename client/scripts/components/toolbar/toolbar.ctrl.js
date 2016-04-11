@@ -2,9 +2,9 @@
     angular.module('quickie')
         .controller('toolbarCtrl', toolbarCtrl);
 
-    toolbarCtrl.$inject = ['$mdSidenav'];
+    toolbarCtrl.$inject = ['$location', '$mdSidenav', 'auth'];
 
-    function toolbarCtrl($mdSidenav) {
+    function toolbarCtrl($location, $mdSidenav, auth) {
         var vm = this;
 
         vm.toggleSidenav = function() {
@@ -14,5 +14,14 @@
         vm.openMenu = function($mdOpenMenu, event) {
             $mdOpenMenu(event);
         };
+
+        vm.isLoggedIn = auth.isLoggedIn();
+
+        vm.currentUser = auth.currentUser();
+
+        vm.logout = function () {
+            auth.logout();
+            $location.path('/');
+        }
     }
 })();
