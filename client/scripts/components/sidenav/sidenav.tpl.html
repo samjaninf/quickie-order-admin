@@ -1,0 +1,93 @@
+<md-sidenav md-component-id="left"
+            md-is-locked-open="$mdMedia('gt-sm')"
+            ng-click="vm.toggleSidenav()"
+            md-theme="dark"
+            layout="column"
+            class="site-sidenav md-sidenav-left md-whiteframe-z2">
+    <md-toolbar id="sidenav-header" class="md-whiteframe-1dp" layout="row" layout-align="space-between center">
+        <div class="logo" layout="row" layout-align="space-between center">
+            <span class="logo-image">QO</span>
+            <span class="logo-text">Quickie Order</span>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <md-list>
+            <md-list-item ui-sref="home">
+                <md-icon md-font-icon="home">home</md-icon>
+                <p>Home</p>
+            </md-list-item>
+            <md-list-item ui-sref="search">
+                <md-icon md-font-icon="search">search</md-icon>
+                <p>Search</p>
+            </md-list-item>
+            <md-list-item ui-sref="orders">
+                <md-icon md-font-icon="move_to_inbox">move_to_inbox</md-icon>
+                <p>Orders</p>
+
+                <md-menu class="md-secondary" md-position-mode="target-right target">
+                    <md-button class="md-icon-button" ng-click="vm.openMenu($mdOpenMenu, $event)">
+                        <md-icon md-menu-origin md-font-icon="more_vert">more_vert</md-icon>
+                    </md-button>
+                    <md-menu-content width="3">
+                        <md-menu-item><md-button>Orders</md-button></md-menu-item>
+                        <md-menu-item><md-button>Drafts</md-button></md-menu-item>
+                        <md-menu-item><md-button>Abandoned checkouts</md-button></md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+
+            </md-list-item>
+            <md-list-item ui-sref="products">
+                <md-icon md-font-icon="local_offer">local_offer</md-icon>
+                <p>Products</p>
+
+
+                <md-menu class="md-secondary" md-position-mode="target-right target">
+                    <md-button class="md-icon-button" ng-click="vm.openMenu($mdOpenMenu, $event)">
+                        <md-icon md-menu-origin md-font-icon="more_vert">more_vert</md-icon>
+                    </md-button>
+                    <md-menu-content width="3">
+                        <md-menu-item><md-button>Products</md-button></md-menu-item>
+                        <md-menu-item><md-button>Transfers</md-button></md-menu-item>
+                        <md-menu-item><md-button>Inventory</md-button></md-menu-item>
+                        <md-menu-item><md-button>Collections</md-button></md-menu-item>
+                        <md-menu-item><md-button>Gift cards</md-button></md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+
+            </md-list-item>
+            <md-list-item ui-sref="customers">
+                <md-icon md-font-icon="people">people</md-icon>
+                <p>Customers</p>
+            </md-list-item>
+            <md-list-item ui-sref="reports">
+                <md-icon md-font-icon="show_chart">show_chart</md-icon>
+                <p>Reports</p>
+            </md-list-item>
+            <md-list-item ui-sref="discounts">
+                <md-icon md-font-icon="money_off">money_off</md-icon>
+                <p>Discounts</p>
+            </md-list-item>
+            <md-list-item ui-sref="settings">
+                <md-icon md-font-icon="settings">settings</md-icon>
+                <p>Settings</p>
+
+                <md-menu class="md-secondary" md-position-mode="target-right target">
+                    <md-button class="md-icon-button" ng-click="vm.openMenu($mdOpenMenu, $event)">
+                        <md-icon md-menu-origin md-font-icon="more_vert">more_vert</md-icon>
+                    </md-button>
+                    <md-menu-content width="3">
+                        <md-menu-item><md-button>General</md-button></md-menu-item>
+                        <md-menu-item><md-button>Payments</md-button></md-menu-item>
+                        <md-menu-item><md-button>Checkout</md-button></md-menu-item>
+                        <md-menu-item><md-button>Shipping</md-button></md-menu-item>
+                        <md-menu-item><md-button>Taxes</md-button></md-menu-item>
+                        <md-menu-item><md-button>Notifications</md-button></md-menu-item>
+                        <md-menu-item><md-button>Files</md-button></md-menu-item>
+                        <md-menu-item><md-button>Account</md-button></md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>

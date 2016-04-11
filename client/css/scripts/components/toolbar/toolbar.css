@@ -1,0 +1,38 @@
+#toolbar {
+  height: 64px;
+  min-height: 64px;
+  max-height: 64px;
+  z-index: 55 !important;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87); }
+  #toolbar #toolbar__main {
+    margin-left: 10px; }
+  #toolbar #sidenav-toggle {
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    margin: 0;
+    padding: 19px;
+    line-height: 24px;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0; }
+  #toolbar #user-menu {
+    height: 64px;
+    padding: 0; }
+    #toolbar #user-menu .user-button {
+      margin: 0;
+      padding: 0 16px;
+      height: 64px;
+      text-transform: none; }
+      #toolbar #user-menu .user-button .avatar-button {
+        position: relative; }
+      #toolbar #user-menu .user-button .username {
+        margin: 0 12px 0 8px;
+        text-transform: none; }
+
+.user-menu-item ng-md-icon {
+  position: absolute;
+  padding: 0;
+  width: 24px;
+  top: 6px;
+  left: 24px; }

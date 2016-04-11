@@ -1,0 +1,45 @@
+<md-toolbar id="toolbar" class="md-menu-toolbar md-whiteframe-1dp">
+    <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="start center" flex>
+            <mb-button id="sidenav-toggle" class="md-icon-button hide-gt-sm" ng-click="vm.toggleSidenav()">
+                <md-icon md-font-icon="icon-menu" class="icon">menu</md-icon>
+            </mb-button>
+            <div layout="row" layout-align="start center" id="toolbar__main" flex>
+                <h1>
+                    <md-icon md-font-icon="person">person</md-icon>
+                    Profile
+                </h1>
+            </div>
+        </div>
+        <div layout="row" layout-align="start center">
+            <md-menu-bar id="user-menu" role="menubar">
+                <md-menu md-position-mode="left bottom">
+                    <md-button class="user-button" aria-label="User settings" ng-click="vm.openMenu($mdOpenMenu, $event)">
+                        <div layout="row" layout-align="space-between center">
+                            <div class="avatar-wrapper">
+                                <img md-menu-align-target class="avatar" src="assets/images/avatars/profile.jpg">
+                            </div>
+                            <span class="username hide-xs">Adam Sohn</span>
+                            <ng-md-icon icon="arrow_drop_down" style="color: black;"></ng-md-icon>
+                        </div>
+                    </md-button>
+                    <md-menu-content width="1">
+                        <md-menu-item class="user-menu-item md-indent" layout-align="start start">
+                            <md-button ui-sref="profile">
+                                <md-icon md-font-icon="person">person</md-icon>
+                                <span>My Profile</span>
+                            </md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item class="user-menu-item md-indent">
+                            <md-button ui-sref="profile">
+                                <md-icon md-font-icon="exit_to_app">exit_to_app</md-icon>
+                                <span>Logout</span>
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </md-menu-bar>
+        </div>
+    </div>
+</md-toolbar>
