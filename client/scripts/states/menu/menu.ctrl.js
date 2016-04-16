@@ -2,9 +2,16 @@
     angular.module('quickie')
         .controller('MenuCtrl', MenuCtrl);
 
-    MenuCtrl.$inject = ['$timeout', 'cfpLoadingBar'];
+    MenuCtrl.$inject = ['$element', 'dragularService'];
 
-    function MenuCtrl($timeout, cfpLoadingBar) {
+    function MenuCtrl($element, dragularService) {
         var vm = this;
+
+        vm.activeContext = {};
+        vm.contextDetails = {};
+
+        dragularService.cleanEnviroment();
+       dragularService('.containerVertical');
+
     }
 })();

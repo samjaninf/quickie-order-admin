@@ -6,6 +6,7 @@
         'ngAnimate',
         'validation.match',
         'angular-loading-bar',
-        'cfp.loadingBar'
+        'cfp.loadingBar',
+        'dragularModule'
     ]);
 })();

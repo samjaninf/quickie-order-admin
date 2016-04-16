@@ -10,25 +10,45 @@
 }
 
 #menus {
-//  height: 100% !important;
   background: transparent;
-//
-//  .md &, .lg & {
-//  }
-//
-//  md-tabs {
-//    margin-bottom: 64px !important;
-//
-//  }
 
    md-tabs md-tabs-wrapper {
     background: white;
    }
 }
 
+#menu-info {
+  .header {
+    padding: 16px 16px 8px 16px;
+    border-bottom: 1px solid #e1e1e1;
 
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      cursor: default;
+      margin: 0;
+    }
 
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
-*/
+    .breadcrumb {
+      color: #616161;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: default;
+    }
+  }
+  .main {
+    height: 300px;
+  }
+}
+
+.containerVertical div {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  cursor: move;
+  cursor: grab;
+  cursor: -webkit-grab;
+}
