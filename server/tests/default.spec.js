@@ -2,17 +2,17 @@
 
 describe('Test tests', function (){
     describe('Pending test', function() {
-        it('should be pending');
+        xit('should be pending');
     });
 
     describe('Failing test', function() {
-        it('should fail', function() {
+        xit('should fail', function() {
             expect(3*3).to.be.equal(8);
         });
     });
 
     describe('Passing test', function() {
-        it('should pass', function() {
+        xit('should pass', function() {
             expect([4, 5, "Arrrr!!"]).to.deep.equal([4, 5, "Arrrr!!"]);
         });
     });
@@ -23,7 +23,7 @@ describe('Test tests', function (){
        };
 
         describe('Stubby', function() {
-           it('should stub a method', function() {
+           xit('should stub a method', function() {
                expect(Test.do('thing')).to.equal('thing and something');
 
                sinon.stub(Test, "do", function(thing){ return thing});

@@ -1,0 +1,86 @@
+<md-content id="menus">
+    <md-tabs md-dynamic-height>
+        <md-tab label="Menus">
+            <div layout="column" layout-margin>
+                <div layout-gt-md="row" style="background: transparent; ">
+                    <md-content id="menu-selections"
+                                layout="column"
+                                flex
+                                ng-class="{'margin-bottom': $mdMedia('md') || $mdMedia('sm') || $mdMedia('xs'), 'margin-right': $mdMedia('gt-md')}"
+                                layout-padding>
+                        <div layout="row">
+                            <md-button>Add</md-button>
+                            <md-button>Rearrange</md-button>
+                            <md-input-container class="md-block" flex>
+                                <label>Menu</label>
+                                <md-select ng-model="vm.menu"
+                                           placeholder="Select a menu">
+                                    <md-option ng-repeat="item in ['one', 'two', 'three']"
+                                               ng-value="item">{{item}}</md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <md-input-container class="md-block">
+                            <label>Sections</label>
+                            <md-select ng-model="vm.sections"
+                                       placeholder="Select a section">
+                                <md-option ng-repeat="item in ['one', 'two', 'three']"
+                                           ng-value="item">{{item}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Menu items</label>
+                            <md-select ng-model="vm.menuItems"
+                                       placeholder="Select a menu items group">
+                                <md-option ng-repeat="item in ['one', 'two', 'three']"
+                                           ng-value="item">{{item}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Menu item</label>
+                            <md-select ng-model="vm.menuItem"
+                                       placeholder="Select a menu item">
+                                <md-option ng-repeat="item in ['one', 'two', 'three']"
+                                           ng-value="item">{{item}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Variables group</label>
+                            <md-select ng-model="vm.varsGroup"
+                                       placeholder="Select a variable group">
+                                <md-option ng-repeat="item in ['one', 'two', 'three']"
+                                           ng-value="item">{{item}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Variables</label>
+                            <md-select ng-model="vm.vars"
+                                       placeholder="Select a variable">
+                                <md-option ng-repeat="item in ['one', 'two', 'three']"
+                                           ng-value="item">{{item}}</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </md-content>
+                    <md-content layout="column" flex>
+                        <md-list>
+                            <md-list-item class="md-3-line" ng-repeat="item in [1, 2, 3]">
+                                <div class="md-list-item-text" layout="column">
+                                    <h3>One</h3>
+                                    <h4>Two</h4>
+                                    <p>Pinterest 3 wolf moon shoreditch, salvia vinyl man bun food truck post-ironic cliche plaid selvage tattooed irony organic pabst. </p>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                    </md-content>
+                </div>
+            </div>
+
+        </md-tab>
+        <md-tab label="Menu items">
+            sdfasdddddd fasdfasd fasdfas
+        </md-tab>
+        <md-tab label="Preview">
+            df asdfasdfas dfasdfasdf
+        </md-tab>
+    </md-tabs>
+</md-content>

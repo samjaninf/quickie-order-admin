@@ -12,8 +12,7 @@
         <!-- build:css css/app.css-->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-        <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" />
-        <link rel="stylesheet" href="bower_components/ng-scrollbar/dist/ng-scrollbar.css" />
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
         <!-- endbower -->
         <!-- injector:css -->
         <link rel="stylesheet" href="css/sass/app.css">
@@ -23,6 +22,7 @@
         <link rel="stylesheet" href="css/scripts/components/sidenav/sidenav.css">
         <link rel="stylesheet" href="css/scripts/components/toolbar/toolbar.css">
         <link rel="stylesheet" href="css/scripts/states/layout/layout.css">
+        <link rel="stylesheet" href="css/scripts/states/menu/menu.css">
         <!-- endinjector -->
         <!-- endbuild -->
         <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -30,7 +30,7 @@
         }</style>
     </head>
     <body ng-cloak>
-    <div id="main" layout="column" ui-view>
+    <div id="main" layout-fill ui-view ng-class="{xs: $mdMedia('xs'), sm: $mdMedia('sm'), md: $mdMedia('md'), lg: $mdMedia('lg')}">
 
     </div>
     <!-- build:js js/app.js-->
@@ -41,9 +41,8 @@
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
-    <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
-    <script src="bower_components/ng-scrollbar/dist/ng-scrollbar.js"></script>
     <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
     <!-- endbower -->
     <!-- injector:js -->
     <script src="scripts/app.js"></script>
@@ -56,8 +55,15 @@
     <script src="scripts/components/toolbar/tollbar.drv.js"></script>
     <script src="scripts/components/toolbar/toolbar.ctrl.js"></script>
     <script src="scripts/routes.js"></script>
+    <script src="scripts/states/home/home.ctrl.js"></script>
+    <script src="scripts/states/home/home.routes.js"></script>
+    <script src="scripts/states/menu/menu.ctrl.js"></script>
+    <script src="scripts/states/menu/menu.routes.js"></script>
+    <script src="scripts/states/menu/menu.srv.js"></script>
     <script src="scripts/states/profile/profile.ctrl.js"></script>
     <script src="scripts/states/profile/profile.srv.js"></script>
+    <script src="scripts/states/settings/settings.ctrl.js"></script>
+    <script src="scripts/states/settings/settings.routes.js"></script>
     <script src="scripts/theme.js"></script>
     <!-- endinjector -->
     <!-- endbuild -->

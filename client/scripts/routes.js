@@ -9,12 +9,6 @@
         $locationProvider.html5Mode(true);
         $urlRouterProvider.when('', '/');
 
-        $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'scripts/states/home/home.tpl.html'
-            });
-
         // Pages without menus and sidenav
         $stateProvider
             .state('layout-page', {
@@ -66,15 +60,17 @@
             })
     }
 
-    run.$inject = ['$rootScope', '$location', 'auth'];
+    run.$inject = ['$rootScope', '$mdMedia', '$location', 'auth'];
 
-    function run($rootScope, $location, auth) {
+    function run($rootScope, $mdMedia, $location, auth) {
 
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
             if ($location.path() === '/profile' && !auth.isLoggedIn()) {
                 $location.path('/login');
             }
         });
+
+        $rootScope.$mdMedia = $mdMedia;
     }
 
 })();

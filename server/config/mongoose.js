@@ -13,6 +13,7 @@ module.exports = function () {
     // with an iterator.
 
     require('../models/users.model.js');
+    require('../models/vendor.model.js');
 
     return db;
 };

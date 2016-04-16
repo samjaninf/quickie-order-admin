@@ -47,6 +47,7 @@ module.exports = function () {
     require('../routes/index.routes.js')(app);
     require('../routes/auth.routes.js')(app);
     require('../routes/users.routes.js')(app);
+    require('../routes/vendors.routes.js')(app);
 
     // This has to go last as a catch all
     require('../routes/app.routes.js')(app);

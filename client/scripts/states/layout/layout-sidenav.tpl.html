@@ -1,9 +1,10 @@
-<div id="layout-sidenav" layout="row" flex ng-cloak>
+<div id="layout-sidenav"
+     layout="row"
+     flex
+     ng-cloak layout-fill>
     <sidenav></sidenav>
-    <div id="content-container" layout="column" flex>
+    <md-content id="content-container" layout-fill style="background-color: transparent">
         <toolbar></toolbar>
-        <md-content flex ng-scrollbar rebuild-on-resize>
-            <div ui-view="content"></div>
-        </md-content>
-    </div>
+        <div ui-view="content"></div>
+    </md-content>
 </div>
