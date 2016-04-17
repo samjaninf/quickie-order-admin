@@ -9,18 +9,17 @@
   }
 }
 
-#menus {
+#menu-builder {
   background: transparent;
 
    md-tabs md-tabs-wrapper {
     background: white;
    }
-}
 
-#menu-info {
   .header {
     padding: 16px 16px 8px 16px;
     border-bottom: 1px solid #e1e1e1;
+    min-height: 65px;
 
     .title {
       font-size: 18px;
@@ -37,9 +36,10 @@
       cursor: default;
     }
   }
-  .main {
-    height: 300px;
-  }
+}
+
+#menu-info, #menu-form {
+  min-height: 300px;
 }
 
 .containerVertical div {

@@ -6,28 +6,28 @@
     margin: 18px 0;
     vertical-align: middle; }
 
-#menus {
+#menu-builder {
   background: transparent; }
-  #menus md-tabs md-tabs-wrapper {
+  #menu-builder md-tabs md-tabs-wrapper {
     background: white; }
+  #menu-builder .header {
+    padding: 16px 16px 8px 16px;
+    border-bottom: 1px solid #e1e1e1;
+    min-height: 65px; }
+    #menu-builder .header .title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      cursor: default;
+      margin: 0; }
+    #menu-builder .header .breadcrumb {
+      color: #616161;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: default; }
 
-#menu-info .header {
-  padding: 16px 16px 8px 16px;
-  border-bottom: 1px solid #e1e1e1; }
-  #menu-info .header .title {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    cursor: default;
-    margin: 0; }
-  #menu-info .header .breadcrumb {
-    color: #616161;
-    font-size: 14px;
-    line-height: 20px;
-    cursor: default; }
-
-#menu-info .main {
-  height: 300px; }
+#menu-info, #menu-form {
+  min-height: 300px; }
 
 .containerVertical div {
   margin: 10px;

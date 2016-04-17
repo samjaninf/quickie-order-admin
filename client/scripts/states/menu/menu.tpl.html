@@ -1,12 +1,11 @@
-<md-content id="menus">
+<md-content id="menu-builder">
     <md-tabs md-dynamic-height>
         <md-tab label="Menus">
             <div layout="column" layout-margin>
                 <div layout-gt-md="row" style="background: transparent; ">
-                    <ng-include src="'scripts/states/menu/menu-info.tpl.html'" flex
+                    <ng-include src="'scripts/states/menu/menu-info.tpl.html'" flex="65"
                                 ng-class="{'margin-bottom': $mdMedia('md') || $mdMedia('sm') || $mdMedia('xs'), 'margin-right': $mdMedia('gt-md')}"></ng-include>
-                    <md-content layout="column" flex>
-                    </md-content>
+                    <ng-include src="'scripts/states/menu/menu-form.tpl.html'" flex="35"></ng-include>
                 </div>
             </div>
 

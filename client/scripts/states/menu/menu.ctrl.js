@@ -4,14 +4,30 @@
 
     MenuCtrl.$inject = ['$element', 'dragularService'];
 
-    function MenuCtrl($element, dragularService) {
+    function MenuCtrl($element) {
         var vm = this;
 
         vm.activeContext = {};
         vm.contextDetails = {};
 
-        dragularService.cleanEnviroment();
-       dragularService('.containerVertical');
+        vm.menuTypes = [
+            {
+                name: 'Container',
+                value: 'menuContainer'
+            },
+            {
+                name: 'Section',
+                value: 'menuSection'
+            },
+            {
+                name: 'Items group',
+                value: 'menuItemsGroup'
+            },
+            {
+                name: 'Menu item',
+                value: 'menuItem'
+            }
+        ]
 
     }
 })();

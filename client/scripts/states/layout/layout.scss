@@ -5,3 +5,8 @@
 .margin-right {
   margin-right: 16px;
 }
+
+.md .fixed-width, .lg .fixed-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
