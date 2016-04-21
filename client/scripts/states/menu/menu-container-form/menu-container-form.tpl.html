@@ -1,0 +1,28 @@
+<md-content class="menu-container-form cell" layout-padding>
+    <header class="header" layout="row" layout-align="space-between start">
+        <div class="md-title">{{vm.activeContext.model.name}}</div>
+        <div>
+            <md-button class="md-icon-button" ng-click="vm.editContainer($event)">
+                <md-icon md-font-icon="add">add</md-icon>
+            </md-button>
+        </div>
+    </header>
+    <section class="section" ng-if="vm.activeContext.children.length">
+        <md-list menu-dragger context="vm.activeContext">
+            <md-list-item ng-repeat="item in vm.activeContext.children track by $index" class="secondary-button-padding" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                <div layout="row" layout-align="space-around center">
+                    <span style="min-width: 30px;"><md-icon ng-show="hover" md-font-icon="swap_vert" style="cursor:pointer">swap_vert</md-icon></span>
+                    <h3>{{item.model.name}}</h3>
+                </div>
+                <md-button ng-click="vm.editContainer($event, item)" class="md-icon-button md-secondary">
+                    <md-icon md-font-icon="edit">edit</md-icon>
+                </md-button>
+            </md-list-item>
+        </md-list>
+    </section>
+</md-content>
+<div layout="row" flex>
+    <md-content flex>
+        <pre style="word-break: break-all">{{vm.activeContext.model | json}}</pre>
+    </md-content>
+</div>

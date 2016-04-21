@@ -1,0 +1,13 @@
+<div class="header" layout="row" layout-align="space-between center">
+    <h3>{{vm.item.name}}</h3>
+    <md-button ng-click="vm.cancel()" class="md-icon-button">
+        <md-icon md-font-icon="close">close</md-icon>
+    </md-button>
+</div>
+<md-input-container>
+    <label>Name</label>
+    <input ng-model="vm.item.name"></md-input>
+</md-input-container>
+<div class="footer" layout="row" layout-align="end center">
+    <md-button ng-click="vm.save()">Save</md-button>
+</div>

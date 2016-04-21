@@ -1,54 +1,54 @@
-#menu-selections {
-  font-size: 16px;
-
-  md-input-container {
-    position: relative;
-    padding: 2px;
-    margin: 18px 0;
-    vertical-align: middle;
-  }
-}
-
-#menu-builder {
-  background: transparent;
-
-   md-tabs md-tabs-wrapper {
-    background: white;
-   }
-
-  .header {
-    padding: 16px 16px 8px 16px;
-    border-bottom: 1px solid #e1e1e1;
-    min-height: 65px;
-
-    .title {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 24px;
-      cursor: default;
-      margin: 0;
-    }
-
-    .breadcrumb {
-      color: #616161;
-      font-size: 14px;
-      line-height: 20px;
-      cursor: default;
-    }
-  }
-}
-
-#menu-info, #menu-form {
-  min-height: 300px;
-}
-
-.containerVertical div {
-  margin: 10px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: opacity 0.4s ease-in-out;
-  transition: opacity 0.4s ease-in-out;
-  cursor: move;
-  cursor: grab;
-  cursor: -webkit-grab;
-}
+//#menu-selections {
+//  font-size: 16px;
+//
+//  md-input-container {
+//    position: relative;
+//    padding: 2px;
+//    margin: 18px 0;
+//    vertical-align: middle;
+//  }
+//}
+//
+//#menu-builder {
+//  background: transparent;
+//
+//   md-tabs md-tabs-wrapper {
+//    background: white;
+//   }
+//
+//  .header {
+//    padding: 16px 16px 8px 16px;
+//    border-bottom: 1px solid #e1e1e1;
+//    min-height: 65px;
+//
+//    .title {
+//      font-size: 18px;
+//      font-weight: 500;
+//      line-height: 24px;
+//      cursor: default;
+//      margin: 0;
+//    }
+//
+//    .breadcrumb {
+//      color: #616161;
+//      font-size: 14px;
+//      line-height: 20px;
+//      cursor: default;
+//    }
+//  }
+//}
+//
+//#menu-info, #menu-form {
+//  min-height: 300px;
+//}
+//
+//.containerVertical div {
+//  margin: 10px;
+//  padding: 10px;
+//  background-color: rgba(0, 0, 0, 0.2);
+//  -webkit-transition: opacity 0.4s ease-in-out;
+//  transition: opacity 0.4s ease-in-out;
+//  cursor: move;
+//  cursor: grab;
+//  cursor: -webkit-grab;
+//}

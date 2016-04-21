@@ -2,32 +2,13 @@
     angular.module('quickie')
         .controller('MenuCtrl', MenuCtrl);
 
-    MenuCtrl.$inject = ['$element', 'dragularService'];
+    MenuCtrl.$inject = ['$scope', 'menu'];
 
-    function MenuCtrl($element) {
+    function MenuCtrl($scope, menu) {
         var vm = this;
+        var activeContext = {};
 
-        vm.activeContext = {};
-        vm.contextDetails = {};
-
-        vm.menuTypes = [
-            {
-                name: 'Container',
-                value: 'menuContainer'
-            },
-            {
-                name: 'Section',
-                value: 'menuSection'
-            },
-            {
-                name: 'Items group',
-                value: 'menuItemsGroup'
-            },
-            {
-                name: 'Menu item',
-                value: 'menuItem'
-            }
-        ]
+        menu.init();
 
     }
 })();

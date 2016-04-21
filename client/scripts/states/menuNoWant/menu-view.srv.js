@@ -2,9 +2,9 @@
     angular.module('quickie')
         .factory('menuView', menuView);
 
-    menuView.$inject = [];
+    menuView.$inject = ['$scope'];
 
-    function menuView() {
+    function menuView($scope) {
         //var activeContext = {
         //    context: '0:5',
         //    name: 'Name',
@@ -40,8 +40,9 @@
             return activeContext;
         }
 
-        function setActiveContext(context, menuModel) {
 
-        }
+
+
+
     }
 })();
