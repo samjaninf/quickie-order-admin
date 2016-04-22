@@ -6,12 +6,22 @@
 
     function menuApi($http, $q, $timeout) {
         var demo = {
-            name: 'Root menu',
+            name: 'Menu',
             type: 'root',
             children: [
                 {
                     name: 'Coffee',
-                    type: 'section'
+                    type: 'section',
+                    children: [
+                        {
+                            name: 'Deep1',
+                            type: 'section'
+                        },
+                        {
+                            name: 'Deep2',
+                            type: 'section'
+                        }
+                    ]
                 },
                 {
                     name: 'Desserts',

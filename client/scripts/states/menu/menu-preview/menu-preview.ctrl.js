@@ -7,12 +7,11 @@
     function menuPreviewCtrl($scope, menu) {
         var vm = this;
         vm.previewContext = {};
-        //
-        //$scope.$watchCollection(function() {
-        //    return menu.getActiveContext();
-        //}, function(newVal) {
-        //    console.log('fuck');
-        //    vm.previewContext = newVal.model;
-        //})
+
+        $scope.$watchCollection(function() {
+            return menu.getActiveContext();
+        }, function(newVal) {
+            vm.previewContext = newVal.model;
+        })
     }
 })();

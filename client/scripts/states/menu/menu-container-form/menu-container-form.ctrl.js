@@ -8,6 +8,14 @@
         var vm = this;
         vm.activeContext = {};
 
+        vm.setActiveContext = menu.setActiveContext;
+        vm.dropItem = function(item) {
+            console.log(item);
+            menu.setActiveContext(item.parent);
+            menu.dropItem(item);
+        };
+        vm.menuBreadcrumb = [];
+
         vm.editContainer = function($event, item) {
             var add = false;
 
@@ -28,10 +36,8 @@
                 }
             }).then(function(newItem) {
                 if (add) {
-                    console.log(newItem);
                     menu.addItem(newItem)
                 } else {
-                    console.log(newItem)
                     angular.extend(item.model, newItem);
                 }
             })
@@ -41,7 +47,7 @@
             return menu.getActiveContext();
         }, function(newVal) {
             vm.activeContext = newVal;
-            console.log(vm.activeContext)
+            vm.path = menu.getBreadcrumb();
         })
     }
 })();

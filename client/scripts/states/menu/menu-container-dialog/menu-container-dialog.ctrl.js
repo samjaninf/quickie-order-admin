@@ -6,7 +6,6 @@
 
     function menuContainerDialogCtrl($mdDialog, item) {
         var vm = this;
-        console.log(item);
         vm.item = item.model;
 
         vm.cancel = $mdDialog.cancel;

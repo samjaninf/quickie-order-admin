@@ -33,9 +33,7 @@
             return node;
         };
 
-        Tree.prototype.format = function() {
-
-        };
+        Tree.prototype.format = function() {}
 
         function addChildToNode(node, child) {
             child.parent = node;

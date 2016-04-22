@@ -24,3 +24,6 @@ a {
   text-align: center;
   color: #ffffff;
   vertical-align: top; }
+
+.clickable {
+  cursor: pointer; }
