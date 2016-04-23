@@ -25,7 +25,6 @@
                 });
 
                 killScope = scope.$on('dragulardrop', function(event, el, container) {
-                    console.log(event);
                     menu.orderContextChildren(scope.items);
                 });
 

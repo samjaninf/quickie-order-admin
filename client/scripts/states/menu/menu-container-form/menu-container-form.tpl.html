@@ -36,9 +36,11 @@
                     <span style="min-width: 30px;"><md-icon ng-show="hover" md-font-icon="swap_vert" style="cursor:pointer">swap_vert</md-icon></span>
                     <h3 ng-click="vm.setActiveContext(item)" class="clickable">{{item.model.name}}</h3>
                 </div>
-                <md-button ng-click="vm.editContainer($event, item)" class="md-icon-button md-secondary">
-                    <md-icon md-font-icon="edit">edit</md-icon>
-                </md-button>
+                <div class="md-secondary">
+                    <md-button ng-click="vm.editContainer($event, item)" class="md-icon-button">
+                        <md-icon md-font-icon="edit">edit</md-icon>
+                    </md-button>
+                </div>
             </md-list-item>
         </md-list>
     </section>

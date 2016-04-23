@@ -9,6 +9,25 @@
         var root = {};
         var activeContext = {};
 
+        var menuTypes = [
+            {
+                name: 'Container',
+                value: 'menuContainer'
+            },
+            {
+                name: 'Section',
+                value: 'menuSection'
+            },
+            {
+                name: 'Items group',
+                value: 'menuItemsGroup'
+            },
+            {
+                name: 'Menu item',
+                value: 'menuItem'
+            }
+        ];
+
         return {
             init: init,
             getActiveContext: getActiveContext,
@@ -16,7 +35,8 @@
             orderContextChildren: orderContextChildren,
             addItem: addItem,
             dropItem: dropItem,
-            getBreadcrumb: getBreadcrumb
+            getBreadcrumb: getBreadcrumb,
+            getTypes: getTypes
 
         };
 
@@ -41,7 +61,6 @@
 
         function setActiveContext(context) {
             activeContext = context;
-            console.log(activeContext);
         }
 
         function orderContextChildren(items) {
@@ -51,10 +70,8 @@
                 modelItems.push(item.model);
             });
 
-            console.log(modelItems);
             activeContext.children = items;
             activeContext.model['children'] = modelItems;
-            console.log(activeContext);
         }
 
         function addItem(model) {
@@ -69,9 +86,12 @@
         function getBreadcrumb() {
             if (typeof activeContext.getPath === 'function') {
                 var path = activeContext.getPath();
-                console.log(path);
                 return path;
             }
+        }
+
+        function getTypes() {
+            return menuTypes;
         }
 
 

@@ -4,10 +4,19 @@
         <md-icon md-font-icon="close">close</md-icon>
     </md-button>
 </div>
-<md-input-container>
-    <label>Name</label>
-    <input ng-model="vm.item.name"></md-input>
+<md-input-container ng-if="!vm.item.type">
+    <md-select ng-model="vm.item.type">
+        <label>Menu types</label>
+        <md-option ng-value="type.value" ng-repeat="type in vm.menuTypes">{{type.name}}</md-option>
+    </md-select>
 </md-input-container>
+<div ng-if="vm.item.type">
+    <div ng-if="vm.item.type">Type: {{vm.item.type}}</div>
+    <md-input-container>
+        <label>Name</label>
+        <input ng-model="vm.item.name">
+    </md-input-container>
+</div>
 <div class="footer" layout="row" layout-align="end center">
     <md-button ng-click="vm.save()">Save</md-button>
 </div>
