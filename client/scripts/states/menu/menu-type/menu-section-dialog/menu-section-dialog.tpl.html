@@ -1,17 +1,13 @@
 <div class="header" layout="row" layout-align="space-between center">
-    <h3>{{vm.item.name}}</h3>
+    <div layout="column">
+        <div>Type: {{vm.item.type}}</div>
+        <h3>{{vm.item.name}}</h3>
+    </div>
     <md-button ng-click="vm.cancel()" class="md-icon-button">
         <md-icon md-font-icon="close">close</md-icon>
     </md-button>
 </div>
-<md-input-container ng-if="!vm.item.type">
-    <md-select ng-model="vm.item.type">
-        <label>Menu types</label>
-        <md-option ng-value="type.value" ng-repeat="type in vm.menuTypes">{{type.name}}</md-option>
-    </md-select>
-</md-input-container>
-<div ng-if="vm.item.type">
-    <div ng-if="vm.item.type">Type: {{vm.item.type}}</div>
+<div>
     <md-input-container>
         <label>Name</label>
         <input ng-model="vm.item.name">

@@ -12,19 +12,19 @@
         var menuTypes = [
             {
                 name: 'Container',
-                value: 'menuContainer'
+                value: 'container'
             },
             {
                 name: 'Section',
-                value: 'menuSection'
+                value: 'section'
             },
             {
                 name: 'Items group',
-                value: 'menuItemsGroup'
+                value: 'group'
             },
             {
                 name: 'Menu item',
-                value: 'menuItem'
+                value: 'item'
             }
         ];
 
