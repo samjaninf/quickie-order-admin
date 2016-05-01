@@ -6,8 +6,13 @@
 
     function menuItem(menu) {
         var activeItem = {};
-        return {
 
+        return {
+            getBreadcrumb: getBreadcrumb
+        };
+
+        function getBreadcrumb () {
+            return menu.getBreadcrumb();
         }
     }
 })();

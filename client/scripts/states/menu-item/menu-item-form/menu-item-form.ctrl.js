@@ -1,10 +1,13 @@
 (function() {
     angular.module('quickie')
-        .controller('menuItemForm', menuItemForm);
+        .controller('menuItemFormCtrl', menuItemFormCtrl);
 
-    menuItemForm.$inject = [];
+    menuItemFormCtrl.$inject = ['$scope', 'menuItem'];
 
-    function menuItemForm() {
+    function menuItemFormCtrl($scope, menuItem) {
         var vm = this;
+
+    
+
     }
 })();

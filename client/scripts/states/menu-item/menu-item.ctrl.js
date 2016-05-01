@@ -2,9 +2,9 @@
     angular.module('quickie')
         .controller('MenuItemCtrl', MenuItemCtrl);
 
-    MenuItemCtrl.$inject = [];
+    MenuItemCtrl.$inject = ['menu'];
 
-    function MenuItemCtrl() {
+    function MenuItemCtrl(menu) {
         var vm = this;
     }
 })();
