@@ -24,16 +24,7 @@
             <md-button ng-if="vm.activeContext.parent" class="md-icon-button" ng-click="vm.dropItem(vm.activeContext)">
                 <md-icon md-font-icon="remove">remove</md-icon>
             </md-button>
-            <md-menu md-position-mode="target-right target">
-                <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
-                    <md-icon md-menu-origin md-font-icon="add">add</md-icon>
-                </md-button>
-                <md-menu-content>
-                    <md-menu-item ng-repeat="type in vm.menuTypes track by $index">
-                        <md-button ng-click="vm.addItem($event, type.value)">{{type.name}}</md-button>
-                    </md-menu-item>
-                </md-menu-content>
-            </md-menu>
+            <menu-nav></menu-nav>
         </div>
     </header>
     <section class="section" ng-if="vm.activeContext.children.length">

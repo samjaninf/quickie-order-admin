@@ -1,0 +1,10 @@
+<md-menu md-position-mode="target-right target">
+    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+        <md-icon md-menu-origin md-font-icon="add">add</md-icon>
+    </md-button>
+    <md-menu-content>
+        <md-menu-item ng-repeat="item in vm.navItems | orderBy:'weight' track by $index">
+            <md-button>{{item.name}}</md-button>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>
