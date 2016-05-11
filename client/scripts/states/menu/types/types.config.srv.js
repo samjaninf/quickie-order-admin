@@ -2,23 +2,26 @@
     angular.module('quickie')
         .provider('typesConfig', typesConfig);
 
-    typesConfig.$inject = [];
-
     function typesConfig() {
         var types = {};
 
-        this.addType = function(type) {
-            type[type.name];
+        this.addType = function(config) {
+            types[config.name] = config;
         };
 
         this.$get = function typesConfigFactory() {
             return {
-                getTypesConfig: getTypes
+                getTypes: getTypes,
+                getType: getType
             }
         };
 
         function getTypes() {
             return types
+        }
+
+        function getType (type) {
+            return types[type];
         }
     }
 })();
