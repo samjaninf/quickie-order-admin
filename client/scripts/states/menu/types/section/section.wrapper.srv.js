@@ -5,10 +5,10 @@
     sectionWrapper.$inject = ['MenuTree'];
 
     function sectionWrapper(MenuTree) {
-        var wrapper = function(item) {
-            this.item = new MenuTree(item);
+        var section = function(item) {
+            this.item = item
         };
 
-        return wrapper;
+        return section;
     }
 })();
