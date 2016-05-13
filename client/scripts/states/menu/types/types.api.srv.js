@@ -34,7 +34,7 @@
 
             $timeout(function() {
                 deferred.resolve(item)
-            }, 2000);
+            }, 500);
 
             return deferred.promise;
         }

@@ -2,9 +2,10 @@
     angular.module('quickie')
         .controller('sectionCtrl', sectionCtrl);
 
-    sectionCtrl.$inject = ['context'];
+    sectionCtrl.$inject = ['item'];
 
-    function sectionCtrl(context) {
+    function sectionCtrl(item) {
         var vm = this;
+        console.log(item);
     }
 })();

@@ -2,13 +2,19 @@
     angular.module('quickie')
         .factory('sectionWrapper', sectionWrapper);
 
-    sectionWrapper.$inject = ['MenuTree'];
+    sectionWrapper.$inject = [];
 
-    function sectionWrapper(MenuTree) {
-        var section = function(item) {
-            this.item = item
+    function sectionWrapper() {
+        return function(item) {
+
+            return {
+                item: item,
+                something: something
+            };
+
+            function something() {
+                item = item + 1;
+            }
         };
-
-        return section;
     }
 })();

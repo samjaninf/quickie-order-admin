@@ -21,21 +21,32 @@
                 url: '/menu',
                 parent: 'menu',
                 views: {
-                    'editor@menu': {
-                        templateProvider: function(config) {
-                            console.log(config);
-                        },
+                    'context@menu': {
+                        templateProvider: ['contextTemplate', function(contextTemplate) {
+                            return contextTemplate;
+                        }],
                         controllerAs: 'vm',
-                        controllerProvider: function(context) {
-
-                        }
+                        controllerProvider: ['contextController', function(contextController) {
+                            return contextController;
+                        }]
+                    },
+                    'preview@menu': {
+                        templateProvider: ['previewTemplate', function(previewTemplate) {
+                            return previewTemplate;
+                        }],
+                        controllerAs: 'vm',
+                        controllerProvider: ['previewController', function(previewController) {
+                            return previewController;
+                        }]
                     }
                 },
                 resolve: {
                     config: config,
-                    context: function(config) {
-                        console.log(config);
-                    }
+                    item: item,
+                    contextController: contextController,
+                    contextTemplate: contextTemplate,
+                    previewController: previewController,
+                    previewTemplate: previewTemplate
                 },
                 params: {
                     item: null,
@@ -43,9 +54,34 @@
                 }
             });
 
-        config.$inject = ['$stateParams', 'TypesFactory'];
-        function config($stateParams, TypesFactory){
-            return new TypesFactory($stateParams);
+        config.$inject = ['$stateParams', 'TypesItemFactory'];
+        function config($stateParams, TypesItemFactory){
+            return TypesItemFactory($stateParams);
+        }
+
+        item.$inject = ['config'];
+        function item(config) {
+            return config.wrapper;
+        }
+
+        contextController.$inject = ['config'];
+        function contextController(config) {
+            return config.getContextController();
+        }
+
+        contextTemplate.$inject = ['config'];
+        function contextTemplate(config) {
+            return config.getContextTemplate();
+        }
+
+        previewController.$inject = ['config'];
+        function previewController(config) {
+            return config.getPreviewController();
+        }
+
+        previewTemplate.$inject = ['config'];
+        function previewTemplate(config) {
+            return config.getPreviewTemplate();
         }
     }
 
