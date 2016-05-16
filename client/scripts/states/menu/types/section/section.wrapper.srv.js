@@ -2,18 +2,33 @@
     angular.module('quickie')
         .factory('sectionWrapper', sectionWrapper);
 
-    sectionWrapper.$inject = [];
+    sectionWrapper.$inject = ['$state'];
 
-    function sectionWrapper() {
+    function sectionWrapper($state) {
         return function(item) {
 
             return {
                 item: item,
-                something: something
+                data: item.model.data,
+                getPath: getPath,
+                hasParent: hasParent,
+                addItem: addItem
             };
 
-            function something() {
-                item = item + 1;
+            function getPath() {
+                var path = item.getPath();
+                return path.map(function(item) {
+                    var pathItem = item.model.data;
+                    pathItem['item'] = item;
+                    return pathItem;
+                });
+            }
+
+            function hasParent() {
+                return !item.isRoot();
+            }
+
+            function addItem(type) {
             }
         };
     }

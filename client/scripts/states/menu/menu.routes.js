@@ -42,7 +42,7 @@
                 },
                 resolve: {
                     config: config,
-                    item: item,
+                    context: context,
                     contextController: contextController,
                     contextTemplate: contextTemplate,
                     previewController: previewController,
@@ -59,8 +59,8 @@
             return TypesItemFactory($stateParams);
         }
 
-        item.$inject = ['config'];
-        function item(config) {
+        context.$inject = ['config'];
+        function context(config) {
             return config.wrapper;
         }
 

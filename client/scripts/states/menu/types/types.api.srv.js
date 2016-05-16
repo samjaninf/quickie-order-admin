@@ -12,23 +12,28 @@
         function fetchType() {
             var item = {
                 type: 'section',
-                data: null,
+                data: {
+                    typeLabel: 'Section',
+                    title: 'Root'
+                },
                 children: [
                     {
                         type: 'section',
                         data: {
-                            name: 'child1'
+                            typeLabel: 'Section',
+                            title: 'Child 1'
                         }
                     },
                     {
                         type: 'section',
                         data: {
-                            name: 'child2'
+                            typeLabel: 'Section',
+                            title: 'Child 2'
                         }
 
                     }
                 ]
-            }
+            };
 
             var deferred = $q.defer();
 

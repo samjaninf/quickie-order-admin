@@ -10,7 +10,12 @@
 
         function typeDefinition() {
             return  {
-                name: 'section',
+                type: 'section',
+                addNav: {
+                    type: 'section',
+                    typeLabel: 'Section',
+                    weight: 0
+                },
                 wrapper: 'sectionWrapper',
                 actions: {
                     view: {
@@ -18,11 +23,11 @@
                         template: 'scripts/states/menu/types/section/section.tpl.html'
                     },
                     add: {
-                        controller: 'sectionCtrl',
+                        controller: 'sectionAddCtrl',
                         template: 'scripts/states/menu/types/section/section.edit.tpl.html'
                     },
                     edit: {
-                        controller: 'sectionCtrl',
+                        controller: 'sectionEditCtrl',
                         template: 'scripts/states/menu/types/section/section.edit.tpl.html'
                     },
                     preview: {

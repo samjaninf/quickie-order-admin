@@ -2,9 +2,9 @@
     angular.module('quickie')
         .directive('menuDragger', menuDragger);
 
-    menuDragger.$inject = ['dragularService', 'menu'];
+    menuDragger.$inject = ['dragularService'];
 
-    function menuDragger(dragularService, menu) {
+    function menuDragger(dragularService) {
         return {
             restrict: 'A',
             scope: {
@@ -25,7 +25,8 @@
                 });
 
                 killScope = scope.$on('dragulardrop', function(event, el, container) {
-                    menu.orderContextChildren(scope.items);
+                    //menu.orderContextChildren(scope.items);
+                    console.log(scope);
                 });
 
                 scope.$on('$destroy', killScope);

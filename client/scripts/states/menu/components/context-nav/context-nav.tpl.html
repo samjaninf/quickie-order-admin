@@ -1,0 +1,20 @@
+<div layout="row">
+    <md-button ng-if="vm.hasParent" class="md-icon-button"">
+        <md-icon md-font-icon="undo">undo</md-icon>
+    </md-button>
+    <md-button ng-if="vm.hasParent" class="md-icon-button">
+        <md-icon md-font-icon="remove">remove</md-icon>
+    </md-button>
+</div>
+<div layout="row"><md-menu md-position-mode="target-right target">
+    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+        <md-icon md-menu-origin md-font-icon="add">add</md-icon>
+    </md-button>
+    <md-menu-content>
+        <md-menu-item ng-repeat="item in vm.addItemsList | orderBy:'weight' track by $index"
+                ng-click="vm.add(item.type)">
+            <md-button>{{item.typeLabel}}</md-button>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>
+</div>

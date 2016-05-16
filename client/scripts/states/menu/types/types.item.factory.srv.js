@@ -21,7 +21,7 @@
                         deferred.resolve(config(action, item));
                     });
             } else {
-                return item;
+                deferred.resolve(config(action, item));
             }
 
             return deferred.promise;
@@ -30,7 +30,6 @@
         function config(action, item) {
             var config = typesConfig.getType(item.model.type);
             var wrapper = new ($injector.get(config.wrapper))(item);
-
             return {
                 wrapper: wrapper,
                 getContextController: getContextController,
@@ -60,7 +59,6 @@
             }
 
             function getTemplate(action) {
-                console.log(config.actions[action].template);
                 return $templateRequest(config.actions[action].template);
             }
         }

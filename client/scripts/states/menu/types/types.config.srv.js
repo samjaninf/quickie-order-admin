@@ -6,7 +6,7 @@
         var types = {};
 
         this.addType = function(config) {
-            types[config.name] = config;
+            types[config.type] = config;
         };
 
         this.$get = function typesConfigFactory() {
