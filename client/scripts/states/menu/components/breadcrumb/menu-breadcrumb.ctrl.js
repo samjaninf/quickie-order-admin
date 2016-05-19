@@ -11,8 +11,10 @@
         vm.go = go;
 
         function go(item) {
-            console.log(item);
-            $state.transitionTo('menuContext', {item: item, action: 'view'});
+            var options = {
+                action: 'view'
+            };
+            $state.transitionTo('menuContext', {item: item, options: options});
         }
     }
 })();

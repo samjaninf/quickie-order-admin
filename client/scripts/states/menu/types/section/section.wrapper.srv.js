@@ -5,14 +5,14 @@
     sectionWrapper.$inject = ['$state'];
 
     function sectionWrapper($state) {
-        return function(item) {
+        return function(item, options) {
 
             return {
                 item: item,
                 data: item.model.data,
+                options: options,
                 getPath: getPath,
-                hasParent: hasParent,
-                addItem: addItem
+                hasParent: hasParent
             };
 
             function getPath() {
@@ -28,8 +28,6 @@
                 return !item.isRoot();
             }
 
-            function addItem(type) {
-            }
         };
     }
 })();

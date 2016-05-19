@@ -2,9 +2,9 @@
     angular.module('quickie')
         .controller('contextNavCtrl', contextNavCtrl);
 
-    contextNavCtrl.$inject = ['typesConfig'];
+    contextNavCtrl.$inject = ['$state', 'typesConfig'];
 
-    function contextNavCtrl(typesConfig) {
+    function contextNavCtrl($state, typesConfig) {
         var vm = this;
         vm.hasParent = hasParent;
         vm.add = add;
@@ -15,7 +15,12 @@
         }
 
         function add(type) {
-            vm.context.addItem(type);
+            var options = {
+                action: 'add',
+                type: type
+            };
+
+            $state.go('menuAdd', {item: vm.context.item, context: 'fuck', options: options});
         }
 
         function addItemsList() {

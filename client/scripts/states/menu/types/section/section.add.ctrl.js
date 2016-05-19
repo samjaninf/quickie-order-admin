@@ -5,6 +5,7 @@
     sectionAddCtrl.$inject = ['context', 'MenuTree'];
 
     function sectionAddCtrl(context, MenuTree) {
+        console.log(context);
         var vm = this;
         var model = {
             type: 'section',

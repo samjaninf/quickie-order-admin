@@ -5,31 +5,31 @@
     TypesItemFactory.$inject = ['$injector', '$q', '$http', '$templateRequest', 'MenuTree', 'typesConfig', 'typesApi'];
 
     function TypesItemFactory($injector, $q, $http, $templateRequest, MenuTree, typesConfig, typesApi) {
+        var defaultOptions = {
+            action: 'view'
+        };
 
         return function($stateParams) {
             var deferred = $q.defer();
-            var action = $stateParams.action || 'view';
             var item = $stateParams.item;
+            var options = angular.extend(defaultOptions, $stateParams.options);
 
-            // Before we can do anything the
-            if (action === 'add') {
-                // Add a node to the tree
-            } else if (!item){
+            if (!item){
                 typesApi.fetchType()
                     .then(function(response) {
                         var item = new MenuTree(response);
-                        deferred.resolve(config(action, item));
+                        deferred.resolve(config(item, options));
                     });
             } else {
-                deferred.resolve(config(action, item));
+                deferred.resolve(config(item, options));
             }
 
             return deferred.promise;
         };
 
-        function config(action, item) {
+        function config(item, options) {
             var config = typesConfig.getType(item.model.type);
-            var wrapper = new ($injector.get(config.wrapper))(item);
+            var wrapper = new ($injector.get(config.wrapper))(item, options);
             return {
                 wrapper: wrapper,
                 getContextController: getContextController,
@@ -39,11 +39,11 @@
             };
 
             function getContextController() {
-                return getController(action);
+                return getController(options.action);
             }
 
             function getContextTemplate() {
-                return getTemplate(action);
+                return getTemplate(options.action);
             }
 
             function getPreviewController() {

@@ -14,8 +14,11 @@
         vm.children = children();
 
         function go(item) {
-            console.log(item);
-            $state.go('menuContext', {item: item, action: 'view'});
+            $state.go('menuContext', {
+                options: {
+                    action: 'view'
+                }
+            });
         }
 
         function children() {

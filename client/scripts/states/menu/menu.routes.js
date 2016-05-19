@@ -12,15 +12,7 @@
                 views: {
                     'content@layout-sidenav': {
                         templateUrl: 'scripts/states/menu/menu.tpl.html'
-                    }
-                }
-            });
-
-        $stateProvider
-            .state('menuContext', {
-                url: '/menu',
-                parent: 'menu',
-                views: {
+                    },
                     'context@menu': {
                         templateProvider: ['contextTemplate', function(contextTemplate) {
                             return contextTemplate;
@@ -50,12 +42,30 @@
                 },
                 params: {
                     item: null,
-                    action: null
+                    options: null
+                }
+            });
+
+        $stateProvider
+            .state('menuContext', {
+                url: '/menu',
+                parent: 'menu'
+            });
+
+        $stateProvider
+            .state('menuAdd', {
+                url: '/menu/add',
+                parent: 'menu',
+                resolve: {
+                    context: function() {
+                        return 'fuck';
+                    }
                 }
             });
 
         config.$inject = ['$stateParams', 'TypesItemFactory'];
         function config($stateParams, TypesItemFactory){
+            console.log('changing');
             return TypesItemFactory($stateParams);
         }
 
