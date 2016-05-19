@@ -5,13 +5,24 @@
     router.$inject = ['$stateProvider'];
 
     function router($stateProvider) {
-        $stateProvider('menu', {
-            parent: 'layout-sidenav',
-            views: {
-                'context@layout-sidenav': {
-                    templateUrl: 'scripts/states/menu/menu.tpl.html'
+        $stateProvider
+            .state('menu', {
+                parent: 'layout-sidenav',
+                abstract: true,
+                url: '/menu',
+                views: {
+                    'content@layout-sidenav': {
+                        templateUrl: 'scripts/states/menu/menu.tpl.html'
+                    }
+                },
+                resolve: {
+                    context: ['$stateParams', function($stateParams) {
+                        return 'context';
+                    }]
+                },
+                params: {
+                    context: null
                 }
-            }
-        })
+            });
     }
 })();
