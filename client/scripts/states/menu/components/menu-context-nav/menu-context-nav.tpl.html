@@ -1,0 +1,11 @@
+<div layout="row">
+    <md-button ng-if="vm.hasParent" class="md-icon-button"">
+    <md-icon md-font-icon="undo">undo</md-icon>
+    </md-button>
+    <md-button ng-if="vm.hasParent" class="md-icon-button">
+        <md-icon md-font-icon="remove">remove</md-icon>
+    </md-button>
+</div>
+<div layout="row">
+    <menu-add-nav context="vm.context"></menu-add-nav>
+</div>

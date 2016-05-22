@@ -37,15 +37,11 @@
                     }
                 },
                 resolve: {
-                    editItem: ['$stateParams', function($stateParams) {
-                        return 'editItem'
-                    }],
                     editAction: ['$stateParams', function($stateParams) {
-                        return 'editAction'
+                        return $stateParams.editAction;
                     }]
                 },
                 params: {
-                    editItem: null,
                     editAction: null
                 }
             });

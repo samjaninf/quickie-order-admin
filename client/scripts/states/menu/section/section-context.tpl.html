@@ -1,1 +1,19 @@
-<h1>Context</h1>
+<header class="header" layout="row" layout-align="center space-between"layout-padding>
+    <menu-crumb flex crumb="vm.crumb" layout="row"></menu-crumb>
+    <menu-context-nav context="vm.context" layout="row"></menu-context-nav>
+</header>
+<section>
+    <md-list menu-dragger items="vm.children">
+        <md-list-item ng-repeat="child in vm.children track by $index" class="secondary-button-padding" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+            <div layout="row" layout-align="space-around center">
+                <span style="min-width: 30px;"><md-icon ng-show="hover" md-font-icon="swap_vert" style="cursor:pointer">swap_vert</md-icon></span>
+                <h3 ng-click="vm.go(child.item)" class="clickable">{{child.title}}</h3>
+            </div>
+            <div class="md-secondary">
+                <md-button class="md-icon-button">
+                    <md-icon md-font-icon="edit">edit</md-icon>
+                </md-button>
+            </div>
+        </md-list-item>
+    </md-list>
+</section>

@@ -2,9 +2,12 @@
     angular.module('quickie')
         .config(router);
 
-    router.$inject = ['$stateProvider'];
+    router.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-    function router($stateProvider) {
+    function router($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.when('/menu', '/menu/section');
+
         $stateProvider
             .state('menu', {
                 parent: 'layout-sidenav',
@@ -16,8 +19,20 @@
                     }
                 },
                 resolve: {
-                    context: ['$stateParams', function($stateParams) {
-                        return 'context';
+                    context: ['$state', '$stateParams', '$q', 'menuInfo', 'MenuTree', function($state, $stateParams, $q, menuInfo, MenuTree) {
+                        var deferred = $q.defer();
+
+                        if ($stateParams.context === null) {
+                            menuInfo.initContext(function(gotoState, context) {
+                                // Try to get to form from here
+                                $state.go('section', {context: context.children[0]});
+                            });
+                            deferred.reject();
+                        } else {
+                            deferred.resolve($stateParams.context);
+                        }
+
+                        return deferred.promise;
                     }]
                 },
                 params: {

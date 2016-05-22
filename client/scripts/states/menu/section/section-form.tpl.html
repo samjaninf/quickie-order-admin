@@ -1,1 +1,15 @@
-<h1>Form</h1>
+<header class="header" layout="row" layout-align="center space-between"layout-padding>
+    <menu-crumb flex layout="row" crumb="vm.crumb"></menu-crumb>
+</header>
+<section id="section-edit" layout="column" layout-padding>
+    <form name="sectionEdit" novalidate ng-submit="vm.submit()">
+        <md-input-container class="md-block">
+            <label>Title</label>
+            <input required md-no-asterisk name="title" ng-model="vm.data.title">
+        </md-input-container>
+        <md-button class="md-raised md-primary submit"
+                   type="submit"
+                   ng-disabled="vm.submitted"
+                   aria-label="Submit">Submit</md-button>
+    </form>
+</section>

@@ -6,5 +6,6 @@
 
     function menuCrumbCtrl() {
         var vm = this;
+        vm.path = vm.crumb;
     }
 })();

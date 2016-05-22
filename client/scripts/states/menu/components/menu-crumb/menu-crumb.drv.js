@@ -10,7 +10,7 @@
             controller: 'menuCrumbCtrl as vm',
             templateUrl: 'scripts/states/menu/components/menu-crumb/menu-crumb.tpl.html',
             bindToController: {
-                context: '='
+                crumb: '='
             },
             scope: true
         }

@@ -9,7 +9,9 @@
             restrict: 'E',
             controller: 'menuAddNavCtrl as vm',
             templateUrl: 'scripts/states/menu/components/menu-add-nav/menu-add-nav.tpl.html',
-            bindToController: {},
+            bindToController: {
+                context: '='
+            },
             scope: true
         }
     }

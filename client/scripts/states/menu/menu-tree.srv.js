@@ -136,6 +136,15 @@
         return path;
     };
 
+    Node.prototype.getCrumb = function() {
+        var paths = this.getPath();
+        return paths.map(function(path) {
+            var crumb = angular.copy(path.model.data);
+            crumb['item'] = path;
+            return crumb;
+        })
+    };
+
     Node.prototype.getIndex = function() {
         if (this.isRoot()) {
             return 0;
