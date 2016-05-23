@@ -1,0 +1,21 @@
+<div class="md-body-2 md-title" layout-padding>Preview</div>
+<md-content class="preview md-whiteframe-z1" layout="column">
+    <header>
+        <div class="toolbar" layout="row" layout-align="space-between center">
+            <span><md-icon md-font-icon="menu">menu</md-icon></span>
+            <span flex layout="row" layout-align="center center"><h3>Luigi's Pizzeria</h3></span>
+            <span><md-icon md-font-icon="more_vert">more_vert</md-icon></span>
+        </div>
+    </header>
+    <section flex layout="column">
+        <div class="menus" layout="column">
+            <md-list>
+                <md-list-item ng-repeat="item in vm.children track by $index">
+                    <h3>{{item.title}}</h3>
+                    <md-button class="md-icon-button md-secondary">
+                        <md-icon md-font-icon="keyboard_arrow_right">keyboard_arrow_right</md-icon>
+                    </md-button>
+                </md-list-item>
+        </div>
+    </section>
+</md-content>

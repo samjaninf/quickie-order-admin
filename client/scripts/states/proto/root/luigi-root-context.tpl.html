@@ -1,0 +1,61 @@
+<div class="context">
+    <header class="header" layout="row" layout-align="center space-between"layout-padding>
+        <div flex layout="row">
+            <div ng-repeat="crumb in vm.path track by $index" layout="row" layout-align="start center">
+                <div ng-if="!$last" class="clickable"
+                     layout="column" layout-align="center center">
+                    <div class="md-body-2 md-title">{{crumb.title}}</div>
+                    <div>{{crumb.typeLabel}}</div>
+                </div>
+                <div ng-if="$last"
+                     layout="column" layout-align="center center">
+                    <div class="md-body-2 md-title">{{crumb.title}}</div>
+                    <div>{{crumb.typeLabel}}</div>
+                </div>
+                <div ng-if="!$last"><md-icon md-font-icon="keyboard_arrow_right">keyboard_arrow_right</md-icon></div>
+            </div>
+        </div>
+        <div layout="row">
+            <div layout="row">
+                <md-button ng-if="vm.hasParent" class="md-icon-button"">
+                <md-icon md-font-icon="undo">undo</md-icon>
+                </md-button>
+                <md-button ng-if="vm.hasParent" class="md-icon-button">
+                    <md-icon md-font-icon="remove">remove</md-icon>
+                </md-button>
+            </div>
+            <div layout="row">
+                <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                        <md-icon md-menu-origin md-font-icon="add">add</md-icon>
+                    </md-button>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <md-button>Section</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </div>
+    </header>
+    <section class="context-table">
+        <md-list menu-dragger items="vm.children">
+            <md-list-item ng-repeat="child in vm.children track by $index"
+                          class="secondary-button-padding"
+                          ng-class="{hover: hover}"
+                          ng-mouseenter="hover = true"
+                          ng-mouseleave="hover = false">
+                <div layout="row" layout-align="start center">
+                    <span style="min-width: 30px;"><md-icon ng-show="hover" md-font-icon="swap_vert" style="cursor:pointer">swap_vert</md-icon></span>
+                    <span class="image-place-holder"><md-icon md-font-icon="insert_photo">insert_photo</md-icon></span>
+                    <h3>{{child.title}}</h3>
+                </div>
+                <div class="md-secondary">
+                    <md-button class="md-icon-button">
+                        <md-icon md-font-icon="edit">edit</md-icon>
+                    </md-button>
+                </div>
+            </md-list-item>
+        </md-list>
+    </section>
+</div>

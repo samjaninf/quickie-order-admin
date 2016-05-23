@@ -1,0 +1,10 @@
+<div layout="column" layout-margin class="luigi">
+    <div layout-gt-md="row" style="background: transparent; ">
+        <div flex="65" ng-class="{'margin-bottom': $mdMedia('md') || $mdMedia('sm') || $mdMedia('xs'), 'margin-right': $mdMedia('gt-md')}">
+            <md-content ui-view="context">1</md-content>
+        </div>
+        <div flex="35">
+            <md-content ui-view="preview">1</md-content>
+        </div>
+    </div>
+</div>
