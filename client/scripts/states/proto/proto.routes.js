@@ -29,7 +29,7 @@
                         controller: 'luigiRootPreviewCtrl as vm'
                     }
                 }
-            })
+            });
 
         $stateProvider
             .state('luigi.food', {
@@ -44,6 +44,21 @@
                         controller: 'luigiFoodPreviewCtrl as vm'
                     }
                 }
-            })
+            });
+
+        $stateProvider
+            .state('luigi.food2', {
+                url: '/luigi/menu/food2',
+                views: {
+                    'context@luigi': {
+                        templateUrl: 'scripts/states/proto/food2/luigi-food2-context.tpl.html',
+                        controller: 'luigiFood2ContextCtrl as vm'
+                    },
+                    'preview@luigi': {
+                        templateUrl: 'scripts/states/proto/food2/luigi-food2-preview.tpl.html',
+                        controller: 'luigiFood2PreviewCtrl as vm'
+                    }
+                }
+            });
     }
 })();

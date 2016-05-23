@@ -8,15 +8,13 @@
         </div>
     </header>
     <section flex layout="column">
-        <div class="menus" layout="column">
-            <md-list>
-                <md-list-item ng-repeat="item in vm.children track by $index">
-                    <h3>{{item.title}}</h3>
-                    <md-button class="md-icon-button md-secondary">
-                        <md-icon md-font-icon="keyboard_arrow_right">keyboard_arrow_right</md-icon>
-                    </md-button>
-                </md-list-item>
-            </md-list>
+        <div class="menus" layout="row" layout-wrap>
+            <div ng-repeat="child in vm.children" flex="50">
+                <md-card>
+                    <img ng-src="{{child.image}}" class="md-card-image">
+                    <div class="md-body-1 md-title card-title">{{child.title}}</div>
+                </md-card>
+            </div>
         </div>
     </section>
 </md-content>

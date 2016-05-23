@@ -1,10 +1,10 @@
 (function() {
     angular.module('quickie')
-        .controller('luigiFoodContextCtrl', luigiFoodContextCtrl);
+        .controller('luigiFood2ContextCtrl', luigiFood2ContextCtrl);
 
-    luigiFoodContextCtrl.$inject = [];
+    luigiFood2ContextCtrl.$inject = [];
 
-    function luigiFoodContextCtrl() {
+    function luigiFood2ContextCtrl() {
         var vm = this;
         vm.path = [
             {
