@@ -75,5 +75,20 @@
                     }
                 }
             });
+
+        $stateProvider
+            .state('luigi.market', {
+                url: '/luigi/menu/market',
+                views: {
+                    'context@luigi': {
+                        templateUrl: 'scripts/states/proto/market/market-context.tpl.html',
+                        controller: 'marketContextCtrl as vm'
+                    },
+                    'preview@luigi': {
+                        templateUrl: 'scripts/states/proto/market/market-preview.tpl.html',
+                        controller: 'marketPreviewCtrl as vm'
+                    }
+                }
+            });
     }
 })();

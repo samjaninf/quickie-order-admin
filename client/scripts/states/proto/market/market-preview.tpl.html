@@ -3,7 +3,7 @@
     <header>
         <div class="toolbar" layout="row" layout-align="space-between center">
             <span><md-icon md-font-icon="menu">menu</md-icon></span>
-            <span flex layout="row" layout-align="center center"><h3>Luigi's Pizzeria</h3></span>
+            <span flex layout="row" layout-align="center center"><h3>My Market & Deli</h3></span>
             <span><md-icon md-font-icon="more_vert">more_vert</md-icon></span>
         </div>
     </header>
@@ -11,10 +11,9 @@
         <section flex layout="column">
             <div layout-padding>
                 <div layout="row" layout-align="space-between center">
-                    <div class="md-body-2 md-title">Tomato Pie - 16"</div>
-                    <span class="price">$14.95</span>
+                    <div class="md-body-2 md-title" style="padding-right: 10px">Mesquite Wood Turkey and Cheese - 12"</div>
+                    <span class="price">$14.49</span>
                 </div>
-                <div class="description">(New York Style) Tomato Sauce and Mozzarella Cheese</div>
                 <div>
                     <div>Quantity</div>
                     <div layout="row" layout-align="space-between center">
@@ -32,43 +31,61 @@
                     </div>
                 </div>
                 <md-list class="modifiers">
-                    <p class="md-body-2 md-title">Included</p>
+                    <p class="md-body-2 md-title">Choose a type of bread</p>
                     <md-list-item>
-                        <p>Tomato sauce</p>
-                        <md-checkbox class="md-secondary" ng-checked="true"></md-checkbox>
+                        <md-input-container flex>
+                            <label style="font-size: 18px">Bread type</label>
+                            <md-select ng-model="breadType" required>
+                                <md-option ng-repeat="breadType in vm.breadTypes"
+                                           value="{{breadType.title}}">
+                                    {{breadType.title}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
                     </md-list-item>
+                    <p class="md-body-2 md-title">Choose a type of cheese</p>
                     <md-list-item>
-                        <p>Mozzarella cheese</p>
-                        <md-checkbox class="md-secondary" ng-checked="true"></md-checkbox>
+                        <md-input-container flex>
+                            <label style="font-size: 18px">Cheese type</label>
+                            <md-select ng-model="cheeseType">
+                                <md-option ng-repeat="cheeseType in vm.cheeseTypes"
+                                           value="{{cheeseType.title}}">
+                                    {{cheeseType.title}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
                     </md-list-item>
-                    <p class="md-body-2 md-title">Add toppings</p>
+                    <p class="md-body-2 md-title">Extras</p>
                     <md-list-item>
-                        <p>Anchovies - $2.50</p>
+                        <p>Iceberg lettuce</p>
                         <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
                     </md-list-item>
                     <md-list-item>
-                        <p>Artichoke slices - $2.50</p>
+                        <p>Tomatoes</p>
                         <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
                     </md-list-item>
                     <md-list-item>
-                        <p>Extra hot finger peppers - $2.50</p>
+                        <p>Red onions</p>
                         <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
                     </md-list-item>
-                </md-list>
+                    <md-list-item>
+                        <p>Green peppers</p>
+                        <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
+                    </md-list-item>
             </div>
         </section>
     </div>
     <footer layout="row" style="background: #efefef;">
         <span flex layout="column">
             <a class="md-body-2 md-title">Add to cart</a>
-            <span>Item total: $14.95</span>
+            <span>Item total: $14.49</span>
         </span>
         <div layout="row" layout-align="space-between center">
             <md-button class="md-icon-button md-accent">
                 <md-icon md-font-icon="shopping_cart">shopping_cart</md-icon>
             </md-button>
             <div layout="column">
-                <span>$42.39</span>
+                <span>$0.00</span>
             </div>
         </div>
     </footer>

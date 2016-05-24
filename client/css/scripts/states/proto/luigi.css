@@ -34,6 +34,8 @@
       padding: 0 5px; }
   .luigi .preview .root-item {
     background: #eff9fd; }
+  .luigi .preview footer {
+    padding: 10px; }
 
 .luigi .image-drop-zone {
   display: block;
