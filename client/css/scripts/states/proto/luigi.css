@@ -1,0 +1,63 @@
+.luigi .context header {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+
+.luigi .context .image-place-holder {
+  padding: 5px;
+  border: 1px solid #a7a7a7;
+  color: #a7a7a7;
+  margin-right: 10px;
+  background: #ececec; }
+
+.luigi .context .thumb {
+  padding: 3px 3px 0 3px;
+  border: 1px solid #a7a7a7;
+  margin-right: 5px; }
+
+.luigi .context .context-table .hover {
+  background: #eff9fd; }
+
+.luigi .context .filler {
+  display: block;
+  background: #ebeef0;
+  height: 15px;
+  width: 100%; }
+
+.luigi .preview {
+  max-width: 300px;
+  margin: 10px auto; }
+  .luigi .preview header, .luigi .preview header md-icon {
+    background-color: #398E3D;
+    color: white; }
+    .luigi .preview header span, .luigi .preview header md-icon span {
+      padding: 0 5px; }
+  .luigi .preview .root-item {
+    background: #eff9fd; }
+
+.luigi .image-drop-zone {
+  display: block;
+  height: 100px;
+  margin: 10px;
+  border: 4px dashed rgba(235, 238, 240, 0.9);
+  border-radius: 20px;
+  padding: 10px; }
+  .luigi .image-drop-zone, .luigi .image-drop-zone md-icon {
+    color: rgba(190, 190, 195, 0.7); }
+  .luigi .image-drop-zone md-icon {
+    font-size: 42px;
+    height: 42px; }
+
+.luigi .card-title {
+  padding: 5px;
+  min-height: 50px; }
+
+.luigi .quantity-box {
+  min-width: 50px;
+  height: 30px;
+  border: 1px solid #101010; }
+
+.scroller {
+  height: 420px;
+  overflow-y: hidden;
+  position: relative; }

@@ -60,5 +60,20 @@
                     }
                 }
             });
+
+        $stateProvider
+            .state('luigi.tomato-pie', {
+                url: '/luigi/menu/tomato-pie',
+                views: {
+                    'context@luigi': {
+                        templateUrl: 'scripts/states/proto/tomato-pie/luigi-tomato-pie-context.tpl.html',
+                        controller: 'luigiTomatoPieContextCtrl as vm'
+                    },
+                    'preview@luigi': {
+                        templateUrl: 'scripts/states/proto/tomato-pie/luigi-tomato-pie-preview.tpl.html',
+                        controller: 'luigiTomatoPiePreviewCtrl as vm'
+                    }
+                }
+            });
     }
 })();

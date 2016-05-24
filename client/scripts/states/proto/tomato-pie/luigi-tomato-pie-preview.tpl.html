@@ -1,0 +1,75 @@
+<div class="md-body-2 md-title" layout-padding>Preview</div>
+<div class="preview md-whiteframe-z1" layout="column">
+    <header>
+        <div class="toolbar" layout="row" layout-align="space-between center">
+            <span><md-icon md-font-icon="menu">menu</md-icon></span>
+            <span flex layout="row" layout-align="center center"><h3>Luigi's Pizzeria</h3></span>
+            <span><md-icon md-font-icon="more_vert">more_vert</md-icon></span>
+        </div>
+    </header>
+    <div flex perfect-scrollbar class="scroller">
+        <section flex layout="column">
+            <div layout-padding>
+                <div layout="row" layout-align="space-between center">
+                    <div class="md-body-2 md-title">Tomato Pie - 16"</div>
+                    <span class="price">$14.95</span>
+                </div>
+                <div class="description">(New York Style) Tomato Sauce and Mozzarella Cheese</div>
+                <div>
+                    <div>Quantity</div>
+                    <div layout="row" layout-align="space-between center">
+                        <div class="quantity-box" layout="column" layout-align="center center">
+                            <div>{{vm.quantity}}</div>
+                        </div>
+                        <div class="counter" layout="row">
+                            <md-button class="md-icon-button md-warn">
+                                <md-icon md-font-icon="remove">remove</md-icon>
+                            </md-button>
+                            <md-button class="md-icon-button md-warn">
+                                <md-icon md-font-icon="add">add</md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+                <md-list class="modifiers">
+                    <p class="md-body-2 md-title">Included</p>
+                    <md-list-item>
+                        <p>Tomato sauce - free</p>
+                        <md-checkbox class="md-secondary" ng-checked="true"></md-checkbox>
+                    </md-list-item>
+                    <md-list-item>
+                        <p>Mozzarella cheese - free</p>
+                        <md-checkbox class="md-secondary" ng-checked="true"></md-checkbox>
+                    </md-list-item>
+                    <p class="md-body-2 md-title">Add toppings</p>
+                    <md-list-item>
+                        <p>Anchovies - $2.50</p>
+                        <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
+                    </md-list-item>
+                    <md-list-item>
+                        <p>Artichoke slices - $2.50</p>
+                        <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
+                    </md-list-item>
+                    <md-list-item>
+                        <p>Extra hot finger peppers - $2.50</p>
+                        <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </section>
+    </div>
+    <footer layout="row" layout-padding style="background: #efefef;">
+        <span flex layout="column">
+            <a class="md-body-2 md-title">Add to cart</a>
+            <span>Item total: $14.95</span>
+        </span>
+        <div layout="row" layout-align="space-between center">
+            <md-button class="md-icon-button md-accent">
+                <md-icon md-font-icon="shopping_cart">shopping_cart</md-icon>
+            </md-button>
+            <div layout="column">
+                <span>$42.39</span>
+            </div>
+        </div>
+    </footer>
+</div>

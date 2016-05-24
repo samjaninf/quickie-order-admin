@@ -7,6 +7,7 @@
         'validation.match',
         'angular-loading-bar',
         'cfp.loadingBar',
-        'dragularModule'
+        'dragularModule',
+        'perfect_scrollbar'
     ]);
 })();

@@ -8,7 +8,7 @@
         $mdThemingProvider
             .theme('default')
             .primaryPalette('indigo')
-            .accentPalette('green');
+            .accentPalette('customAccent');
 
         var customAccent = {
             '50': '#ffe6eb',
@@ -22,7 +22,7 @@
             '800': '#800117',
             '900': '#610011',
             'A100': '#ffe6eb',
-            'A200': '#ff9aac',
+            'A200': '#259B24',
             'A400': '#f9012c',
             'A700': '#9e011c',
             'contrastDefaultColor': 'light',

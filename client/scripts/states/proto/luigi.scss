@@ -34,10 +34,10 @@
   }
 
   .preview {
-    height: 500px;
+//    height: 500px;
     max-width: 300px;
     margin: 10px auto;
-    overflow: hidden;
+//    overflow: hidden;
 
     header, header md-icon {
       background-color: #398E3D;
@@ -50,6 +50,9 @@
 
     .root-item {
       background: #eff9fd;
+    }
+
+    footer {
     }
   }
 
@@ -79,4 +82,15 @@
     min-height: 50px;
   }
 
+  .quantity-box {
+    min-width: 50px;
+    height: 30px;
+    border: 1px solid #101010;
+  }
+}
+
+.scroller {
+  height: 420px;
+  overflow-y: hidden;
+  position: relative;
 }
