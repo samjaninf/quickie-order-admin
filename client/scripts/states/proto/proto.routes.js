@@ -90,5 +90,20 @@
                     }
                 }
             });
+
+        $stateProvider
+            .state('luigi.profile', {
+                url: '/luigi/profile',
+                views: {
+                    'context@luigi': {
+                        templateUrl: 'scripts/states/proto/profile/profile-context.tpl.html',
+                        controller: 'profileContextCtrl as vm'
+                    },
+                    'preview@luigi': {
+                        templateUrl: 'scripts/states/proto/profile/profile-preview.tpl.html',
+                        controller: 'profilePreviewCtrl as vm'
+                    }
+                }
+            });
     }
 })();

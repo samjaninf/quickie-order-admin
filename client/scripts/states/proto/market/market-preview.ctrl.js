@@ -2,14 +2,23 @@
     angular.module('quickie')
         .controller('marketPreviewCtrl', marketPreviewCtrl);
 
-    marketPreviewCtrl.$inject = [];
+    marketPreviewCtrl.$inject = ['$mdDialog'];
 
-    function marketPreviewCtrl() {
+    function marketPreviewCtrl($mdDialog) {
         var vm = this;
         vm.toggle = function (what, next) {
             console.log(what, next);
         };
 
+        vm.dialog = function(ev) {
+            console.log(ev);
+            $mdDialog.show({
+                controller: 'marketDialogCtrl as vm',
+                templateUrl: 'scripts/states/proto/market/market-dialog.tpl.html',
+                parent: angular.element(document.querySelector('.scroller')),
+                fullscreen: true
+            })
+        };
 
         vm.quantity = 1;
         vm.breadTypes = [

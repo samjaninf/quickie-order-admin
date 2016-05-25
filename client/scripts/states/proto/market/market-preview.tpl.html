@@ -1,5 +1,5 @@
 <div class="md-body-2 md-title" layout-padding>Preview</div>
-<div class="preview md-whiteframe-z1" layout="column">
+<div id="preview-pane" class="preview md-whiteframe-z1" layout="column">
     <header>
         <div class="toolbar" layout="row" layout-align="space-between center">
             <span><md-icon md-font-icon="menu">menu</md-icon></span>
@@ -15,16 +15,16 @@
                     <span class="price">$14.49</span>
                 </div>
                 <div>
-                    <div>Quantity</div>
+                    <div class="md-body-2 md-title">Quantity</div>
                     <div layout="row" layout-align="space-between center">
                         <div class="quantity-box" layout="column" layout-align="center center">
                             <div>{{vm.quantity}}</div>
                         </div>
                         <div class="counter" layout="row">
-                            <md-button class="md-icon-button md-warn">
+                            <md-button class="md-icon-button md-accent">
                                 <md-icon md-font-icon="remove">remove</md-icon>
                             </md-button>
-                            <md-button class="md-icon-button md-warn">
+                            <md-button class="md-icon-button md-accent">
                                 <md-icon md-font-icon="add">add</md-icon>
                             </md-button>
                         </div>
@@ -81,11 +81,11 @@
             <span>Item total: $14.49</span>
         </span>
         <div layout="row" layout-align="space-between center">
-            <md-button class="md-icon-button md-accent">
+            <md-button class="md-icon-button md-accent" ng-click="vm.dialog($event)">
                 <md-icon md-font-icon="shopping_cart">shopping_cart</md-icon>
             </md-button>
             <div layout="column">
-                <span>$0.00</span>
+                <span>$16.24</span>
             </div>
         </div>
     </footer>

@@ -86,7 +86,7 @@
   .quantity-box {
     min-width: 50px;
     height: 30px;
-    border: 1px solid #101010;
+    border-bottom: 1px solid rgba(0, 0, 0, .26);
   }
 }
 
@@ -94,4 +94,47 @@
   height: 420px;
   overflow-y: hidden;
   position: relative;
+}
+
+
+md-dialog {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.invoice {
+  height: 500px;
+  position: relative;
+
+  .header {
+    height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, .26);
+  }
+
+  .closer {
+    position: absolute;
+    height: 40px;
+  }
+
+  .border-solid, .border-dashed {
+    border-bottom: 1px solid rgba(0, 0, 0, .26);
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+
+  .border-dashed {
+    border-bottom-style: dashed;
+  }
+
+  footer {
+    background-color: rgb(255,87,34);
+    color: white;
+    max-height: 45px;
+  }
+  .invoicer {
+    height: 400px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+  }
 }

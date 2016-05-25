@@ -57,9 +57,38 @@
 .luigi .quantity-box {
   min-width: 50px;
   height: 30px;
-  border: 1px solid #101010; }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26); }
 
 .scroller {
   height: 420px;
   overflow-y: hidden;
   position: relative; }
+
+md-dialog {
+  max-width: 95%;
+  max-height: 95%; }
+
+.invoice {
+  height: 500px;
+  position: relative; }
+  .invoice .header {
+    height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26); }
+  .invoice .closer {
+    position: absolute;
+    height: 40px; }
+  .invoice .border-solid, .invoice .border-dashed {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+    padding-bottom: 5px;
+    margin-bottom: 5px; }
+  .invoice .border-dashed {
+    border-bottom-style: dashed; }
+  .invoice footer {
+    background-color: #ff5722;
+    color: white;
+    max-height: 45px; }
+  .invoice .invoicer {
+    height: 400px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative; }
