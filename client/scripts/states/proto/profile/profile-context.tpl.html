@@ -1,94 +1,109 @@
 <div class="context">
-    <header class="header" layout="row" layout-align="center space-between"layout-padding>
-        <div flex layout="row">
-            <div ng-repeat="crumb in vm.path track by $index" layout="row" layout-align="start center">
-                <div ng-if="!$last" class="clickable"
-                     layout="column" layout-align="center center">
-                    <div class="md-body-2 md-title">{{crumb.title}}</div>
-                    <div>{{crumb.typeLabel}}</div>
-                </div>
-                <div ng-if="$last"
-                     layout="column" layout-align="center center">
-                    <div class="md-body-2 md-title">{{crumb.title}}</div>
-                    <div>{{crumb.typeLabel}}</div>
-                </div>
-                <div ng-if="!$last"><md-icon md-font-icon="keyboard_arrow_right">keyboard_arrow_right</md-icon></div>
-            </div>
-        </div>
-        <div layout="row">
-            <div layout="row">
-                <md-button ng-if="vm.hasParent" class="md-icon-button"">
-                <md-icon md-font-icon="undo">undo</md-icon>
-                </md-button>
-                <md-button ng-if="vm.hasParent" class="md-icon-button">
-                    <md-icon md-font-icon="remove">remove</md-icon>
-                </md-button>
-            </div>
-            <div layout="row">
-                <md-menu md-position-mode="target-right target">
-                    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
-                        <md-icon md-menu-origin md-font-icon="add">add</md-icon>
-                    </md-button>
-                    <md-menu-content>
-                        <md-menu-item>
-                            <md-button>Section</md-button>
-                        </md-menu-item>
-                    </md-menu-content>
-                </md-menu>
-            </div>
-        </div>
-    </header>
-    <section class="context-table">
-        <md-list menu-dragger items="vm.children">
-            <md-list-item ng-repeat="child in vm.children track by $index"
-                          class="secondary-button-padding"
-                          ng-class="{hover: hover}"
-                          ng-mouseenter="hover = true"
-                          ng-mouseleave="hover = false">
-                <div layout="row" layout-align="start center">
-                    <span style="min-width: 30px;"><md-icon ng-show="hover" md-font-icon="swap_vert" style="cursor:pointer">swap_vert</md-icon></span>
-                        <div layout="row" layout-align="center center">
-                            <div class="md-body-2 md-title">{{child.title}} </div>
-                            <div>&nbsp;| {{child.type}}</div>
-                        </div>
-                </div>
-                <div class="md-secondary">
-                    <md-button class="md-icon-button">
-                        <md-icon md-font-icon="edit">edit</md-icon>
-                    </md-button>
-                </div>
-            </md-list-item>
-        </md-list>
-    </section>
-    <div class="filler"></div>
     <section layout-padding>
         <div class="md-body-2 md-title">Information</div>
-        <form layout="row">
-            <md-input-container flex ng-init='title="16\""'>
-                <label>Title</label>
-                <input ng-model="title">
+        <div layout="row">
+            <md-input-container flex>
+                <label>Business name</label>
+                <input value="Luigi's Pizzeria">
             </md-input-container>
-            <md-input-container flex ng-init="price='14.95'">
-                <label>Price</label>
-                <input ng-model="price"/>
+            <md-input-container flex>
+                <label>Account email</label>
+                <input type="email" value="luigi@luigiscoalovenpizza.com"/>
             </md-input-container>
-        </form>
+        </div>
+    </section>
+    <div class="filler"></div>
+    <section>
+        <div layout="row">
+            <div flex layout-padding>
+                <div layout="row" layout-align="space-between center">
+                    <div class="md-body-2 md-title">Image</div>
+                    <div class="row">
+                        <a>Add image from URL</a>
+                    </div>
+                </div>
+                <div layout="column" layout-align="center center">
+                    <img style="width:200px" ng-src="scripts/states/proto/images/luigi.jpg"/>
+                    <div>
+                        <md-button class="md-icon-button">
+                            <md-icon md-font-icon="visibility">visibility</md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button">
+                            <md-icon md-font-icon="create">create</md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button">
+                            <md-icon md-font-icon="delete">delete</md-icon>
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+            <div style="background:#EBEEF0; width: 10px;"></div>
+            <div flex layout-padding layout="column">
+                <div class="md-body-2 md-title">Base color</div>
+                <div layout="row" layout-align="space-between">
+                    <div flex="45"><img style="width: 100%" ng-src="scripts/states/proto/images/color-picker.jpg"/></div>
+                    <div flex="45" layout="column" layout-align="start">
+                        <div style="background-color: hsl(123, 43%, 39%); width: 100%; height: 50px; display: block"></div>
+                        <md-input-container>
+                            <label>Color value</label>
+                            <input value="hsl(123, 43%, 39%)">
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
     <div class="filler"></div>
     <section layout-padding>
-        <div layout="row" layout-align="space-between center">
-            <div class="md-body-2 md-title">Images</div>
-            <div class="row">
-                <a>Add image from URL</a>
-            </div>
+        <div class="md-body-2 md-tittle">Address and contact</div>
+        <div layout="row">
+            <md-input-container flex>
+                <label>Phone number</label>
+                <input value="(954) 522-8888">
+            </md-input-container>
+            <md-input-container flex>
+                <label>Public email</label>
+                <input value="info@luigiscoalovenpizza.com">
+            </md-input-container>
         </div>
-        <div class="image-drop-zone" layout="column" layout-align="space-around center">
-            <div layout="row" layout-align="center center" flex>
-                <md-icon md-font-icon="photo_library">photo_library</md-icon>
-            </div>
-            <div layout="row" layout-align="center center" flex>
-                <p>Drag and drop images here</p>
-            </div>
+        <div layout="row">
+            <md-input-container flex>
+                <label>Address 1</label>
+                <input value="1415 E Las Olas Blvd">
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container flex>
+                <label>Address 2</label>
+                <input>
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container flex>
+                <label>City</label>
+                <input value="Fort Lauderdale">
+            </md-input-container>
+            <md-input-container flex>
+                <label>State</label>
+                <md-select ng-model="vm.state">
+                    <md-option>FL</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container flex>
+                <label>Zip</label>
+                <input value="33301">
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container flex>
+                <label>Latitude</label>
+                <input disabled value="26.119668">
+            </md-input-container>
+            <md-input-container flex>
+                <label>Longitude</label>
+                <input disabled value="-80.1288635">
+            </md-input-container>
         </div>
     </section>
 </div>

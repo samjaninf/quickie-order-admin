@@ -7,69 +7,34 @@
             <span><md-icon md-font-icon="more_vert">more_vert</md-icon></span>
         </div>
     </header>
-    <div flex perfect-scrollbar class="scroller">
-        <section flex layout="column">
-            <div layout-padding>
-                <div layout="row" layout-align="space-between center">
-                    <div class="md-body-2 md-title">Tomato Pie - 16"</div>
-                    <span class="price">$14.95</span>
-                </div>
-                <div class="description">(New York Style) Tomato Sauce and Mozzarella Cheese</div>
+    <section flex perfect-scrollbar class="scroller">
+        <div class="info">
+            <img src="scripts/states/proto/images/luigi.jpg"/>
+        </div>
+        <div layout-padding>
+            <div><b>(954) 522-8888</b></div>
+            <div>
                 <div>
-                    <div>Quantity</div>
-                    <div layout="row" layout-align="space-between center">
-                        <div class="quantity-box" layout="column" layout-align="center center">
-                            <div>{{vm.quantity}}</div>
-                        </div>
-                        <div class="counter" layout="row">
-                            <md-button class="md-icon-button md-accent">
-                                <md-icon md-font-icon="remove">remove</md-icon>
-                            </md-button>
-                            <md-button class="md-icon-button md-accent">
-                                <md-icon md-font-icon="add">add</md-icon>
-                            </md-button>
-                        </div>
-                    </div>
+                    1415 E Las Olas Blvd
                 </div>
-                <md-list class="modifiers">
-                    <p class="md-body-2 md-title">Included</p>
-                    <md-list-item>
-                        <p>Tomato sauce</p>
-                        <md-checkbox class="md-secondary" ng-checked="true"></md-checkbox>
-                    </md-list-item>
-                    <md-list-item>
-                        <p>Mozzarella cheese</p>
-                        <md-checkbox class="md-secondary" ng-checked="true"></md-checkbox>
-                    </md-list-item>
-                    <p class="md-body-2 md-title">Add toppings</p>
-                    <md-list-item>
-                        <p>Anchovies - $2.50</p>
-                        <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
-                    </md-list-item>
-                    <md-list-item>
-                        <p>Artichoke slices - $2.50</p>
-                        <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
-                    </md-list-item>
-                    <md-list-item>
-                        <p>Extra hot finger peppers - $2.50</p>
-                        <md-checkbox class="md-secondary" ng-checked="false"></md-checkbox>
-                    </md-list-item>
-                </md-list>
+                <div>
+                    <span>Fort Lauderdale, FL 33301</span>
+                    <span><a>map</a></span>
+                </div>
             </div>
-        </section>
-    </div>
-    <footer layout="row" style="background: #efefef;">
-        <span flex layout="column">
-            <a class="md-body-2 md-title">Add to cart</a>
-            <span>Item total: $14.95</span>
-        </span>
-        <div layout="row" layout-align="space-between center">
-            <md-button class="md-icon-button md-accent">
-                <md-icon md-font-icon="shopping_cart">shopping_cart</md-icon>
-            </md-button>
-            <div layout="column">
-                <span>$42.39</span>
+            <div>Italian / Pizza</div>
+            <div>
+                <div><span style="display: inline-block; width:30px"><b>Mon</b></span> 11:30 am - 11:00 pm</div>
+                <div><span style="display: inline-block; width:30px"><b>Tue</b></span> 11:30 am - 11:00 pm</div>
+                <div><span style="display: inline-block; width:30px"><b>Web</b></span> 11:30 am - 11:00 pm</div>
+                <div><span style="display: inline-block; width:30px"><b>Thu</b></span> 11:30 am - 11:00 pm</div>
+                <div><span style="display: inline-block; width:30px"><b>Fri</b></span> 11:30 am - 11:00 pm</div>
+                <div><span style="display: inline-block; width:30px"><b>Sat</b></span> 11:30 am - 11:00 pm</div>
+                <div><span style="display: inline-block; width:30px"><b>Sun</b></span> 11:30 am - 11:00 pm</div>
             </div>
         </div>
+    </section>
+    <footer layout="row" style="background: #efefef; height: 52px;" layout-align="center center">
+        <div class="md-body-2 md-title"><a>ORDER NOW</a></div>
     </footer>
 </div>

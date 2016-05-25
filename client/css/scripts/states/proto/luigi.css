@@ -1,28 +1,26 @@
-.luigi .context header {
-  border-bottom: 1px solid #ececec;
-  padding-bottom: 10px;
-  margin-bottom: 10px; }
-
-.luigi .context .image-place-holder {
-  padding: 5px;
-  border: 1px solid #a7a7a7;
-  color: #a7a7a7;
-  margin-right: 10px;
-  background: #ececec; }
-
-.luigi .context .thumb {
-  padding: 3px 3px 0 3px;
-  border: 1px solid #a7a7a7;
-  margin-right: 5px; }
-
-.luigi .context .context-table .hover {
-  background: #eff9fd; }
-
-.luigi .context .filler {
-  display: block;
-  background: #ebeef0;
-  height: 15px;
-  width: 100%; }
+.luigi .context {
+  font-size: 1.5rem; }
+  .luigi .context header {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+    margin-bottom: 10px; }
+  .luigi .context .image-place-holder {
+    padding: 5px;
+    border: 1px solid #a7a7a7;
+    color: #a7a7a7;
+    margin-right: 10px;
+    background: #ececec; }
+  .luigi .context .thumb {
+    padding: 3px 3px 0 3px;
+    border: 1px solid #a7a7a7;
+    margin-right: 5px; }
+  .luigi .context .context-table .hover {
+    background: #eff9fd; }
+  .luigi .context .filler {
+    display: block;
+    background: #ebeef0;
+    height: 15px;
+    width: 100%; }
 
 .luigi .preview {
   max-width: 300px;
