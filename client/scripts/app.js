@@ -8,6 +8,7 @@
         'angular-loading-bar',
         'cfp.loadingBar',
         'dragularModule',
-        'perfect_scrollbar'
+        'perfect_scrollbar',
+        'md.data.table'
     ]);
 })();

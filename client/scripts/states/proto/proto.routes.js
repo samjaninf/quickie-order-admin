@@ -105,5 +105,16 @@
                     }
                 }
             });
+
+        $stateProvider
+            .state('luigi.report', {
+                url: '/luigi/report',
+                views: {
+                    'content@layout-sidenav': {
+                        templateUrl: 'scripts/states/proto/report/report-context.tpl.html',
+                        controller: 'reportContextCtrl as vm'
+                    }
+                }
+            });
     }
 })();

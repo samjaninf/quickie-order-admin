@@ -1,0 +1,37 @@
+<div layout="column" layout-margin class="luigi">
+    <div layout-gt-md="row" style="background: transparent; ">
+        <md-content flex>
+            <section flex layout-padding>
+                <div layout="row" layout-align="end start">
+                    <span>Select date range</span>
+                    <md-datepicker style="height: 50px; margin-right:-16px" ng-model="vm.start">To date</md-datepicker>
+                    <md-datepicker style="height: 50px; margin-right:-16px" ng-model="vm.end"></md-datepicker>
+                </div>
+                <md-table-container>
+                    <table md-table>
+                        <thead md-head>
+                        <tr md-row>
+                            <th md-column md-checkbox-column><md-checkbox aria-label="ya"></md-checkbox></th>
+                            <th md-column><span>Date</span></th>
+                            <th md-column md-numeric><span>Total # of orders</span></th>
+                            <th md-column md-numeric><span>Time to complete(in minutes)</span></th>
+                            <th md-column md-numeric><span>Average order price</span></th>
+                        </tr>
+                        </thead>
+                        <tbody md-body>
+                        <tr md-row ng-repeat="item in vm.items">
+                            <td md-cell md-checkbox-cell><md-checkbox aria-label="ya"></md-checkbox></td>
+                            <td md-cell>{{item.date | date : 'short'}}</td>
+                            <td md-cell md-numeric>{{item.orders}}</td>
+                            <td md-cell md-numeric>{{item.completion}}</td>
+                            <td md-cell md-numeric>{{item.price | currency}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </md-table-container>
+                <md-table-pagination md-limit="5" md-limit-options="[5, 10, 15]" md-page="1" md-total="{{vm.count}}"></md-table-pagination>
+            </section>
+        </md-content>
+
+    </div>
+</div>
