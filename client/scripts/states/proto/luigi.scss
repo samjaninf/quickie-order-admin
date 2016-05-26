@@ -27,12 +27,6 @@
       background: #eff9fd;
     }
 
-    .filler {
-      display: block;
-      background: rgb(235, 238, 240);
-      height: 15px;
-      width: 100%;
-    }
   }
 
   .preview {
@@ -139,4 +133,11 @@ md-dialog {
     overflow-x: hidden;
     position: relative;
   }
+}
+
+.filler {
+  display: block;
+  background: rgb(235, 238, 240);
+  height: 15px;
+  width: 100%;
 }

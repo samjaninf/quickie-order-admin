@@ -16,11 +16,6 @@
     margin-right: 5px; }
   .luigi .context .context-table .hover {
     background: #eff9fd; }
-  .luigi .context .filler {
-    display: block;
-    background: #ebeef0;
-    height: 15px;
-    width: 100%; }
 
 .luigi .preview {
   max-width: 300px;
@@ -90,3 +85,9 @@ md-dialog {
     overflow-y: hidden;
     overflow-x: hidden;
     position: relative; }
+
+.filler {
+  display: block;
+  background: #ebeef0;
+  height: 15px;
+  width: 100%; }

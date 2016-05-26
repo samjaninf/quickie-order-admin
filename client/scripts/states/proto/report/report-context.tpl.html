@@ -2,6 +2,14 @@
     <div layout-gt-md="row" style="background: transparent; ">
         <md-content flex>
             <section flex layout-padding>
+                <div class="md-body-2 md-title">Average time to complete order</div>
+                <canvas height="250" id="line" class="chart chart-line" chart-data="vm.data"
+                        chart-labels="vm.labels" chart-series="vm.series"
+                        chart-click="vm.onClick" chart-legend="true" chart-options="vm.options">
+                </canvas>
+            </section>
+            <div class="filler"></div>
+            <section flex layout-padding>
                 <div layout="row" layout-align="end start">
                     <span>Select date range</span>
                     <md-datepicker style="height: 50px; margin-right:-16px" ng-model="vm.start">To date</md-datepicker>

@@ -9,6 +9,7 @@
         'cfp.loadingBar',
         'dragularModule',
         'perfect_scrollbar',
-        'md.data.table'
+        'md.data.table',
+        'chart.js'
     ]);
 })();
